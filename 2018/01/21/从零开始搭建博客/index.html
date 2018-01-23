@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="未知的世界">
 <meta property="og:description" content="你是不是早就厌倦了那些博客网站毫无美感的界面，是不是受够了无休无止的网站推送，是不是早就想建立一个属于自己的博客，却止步于复杂的教程以及一系列令人头疼的代码？那么恭喜你，这篇文章就是想以最浅显易懂的方式手把手教你搭建属于自己的博客，你只需要一点耐心，一步步跟着做就好。 Hexo作为一个快速、简洁且高效的博客框架，简直是小白们的福音，而GitHub又免去了我们额外租用并部署服务器的麻烦。因此本文将利">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-23T17:01:36.454Z">
+<meta property="og:updated_time" content="2018-01-23T17:14:01.465Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从零开始搭建博客简明教程">
 <meta name="twitter:description" content="你是不是早就厌倦了那些博客网站毫无美感的界面，是不是受够了无休无止的网站推送，是不是早就想建立一个属于自己的博客，却止步于复杂的教程以及一系列令人头疼的代码？那么恭喜你，这篇文章就是想以最浅显易懂的方式手把手教你搭建属于自己的博客，你只需要一点耐心，一步步跟着做就好。 Hexo作为一个快速、简洁且高效的博客框架，简直是小白们的福音，而GitHub又免去了我们额外租用并部署服务器的麻烦。因此本文将利">
@@ -387,29 +387,29 @@
 </li>
 <li><p>新建一个文件夹，如 MyBlog</p>
 </li>
-<li>生成hexo模板: 进入该文件夹内，右击运行 git ，输入：</li>
-</ul>
+<li><p>生成hexo模板: 进入该文件夹内，右击运行 git ，输入：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
-<ul>
-<li>生成完模板，安装 npm ：运行</li>
-</ul>
+</li>
+<li><p>生成完模板，安装 npm ，运行：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 <p>没错，博客的主体部分到此已经完成了，来看看效果吧。运行：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 <p> 这时候打开浏览器，输入 localhost:4000 就可以看到博客目前的样子了。小小激动一下，然后按 Ctrl + C 就可以继续下面的操作了。</p>
 <h3 id="个性化设置（初步）"><a href="#个性化设置（初步）" class="headerlink" title="个性化设置（初步）"></a>个性化设置（初步）</h3><h4 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h4><ul>
 <li><p>下载新的主题（以( NexT 主题)[<a href="http://theme-next.iissnan.com/]为例），在根目录下运行：" target="_blank" rel="noopener">http://theme-next.iissnan.com/]为例），在根目录下运行：</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <ul>
-<li>打开根目录下的 _config.yml ，修改字段 theme 为:</li>
-</ul>
+<li><p>打开根目录下的 _config.yml ，修改字段 theme 为:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure>
-<ul>
-<li>选择外观：打开 /themes/next 目录下的主题配置文件 _config.yml ， 找到 scheme 字段（可用 Ctrl + F 快捷查找）。NexT提供了三种不同的外观，可以挑选一个自己喜欢的，然后去掉其中一个的 # 号。</li>
-</ul>
+</li>
+<li><p>选择外观：打开 /themes/next 目录下的主题配置文件 _config.yml ， 找到 scheme 字段（可用 Ctrl + F 快捷查找）。NexT提供了三种不同的外观，可以挑选一个自己喜欢的，然后去掉其中一个的 # 号。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="comment">#scheme: Muse</span></span><br><span class="line">scheme: Mist</span><br><span class="line"><span class="comment">#scheme: Pisces</span></span><br><span class="line"><span class="comment">#scheme: Gemini</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 <p>后续主要修改的也就是这两个文件：站点配置文件和主题配置文件。</p>
 <ul>
 <li>查看效果，可运行如下命令(以后每次想查看效果都可重复此步骤)：</li>
