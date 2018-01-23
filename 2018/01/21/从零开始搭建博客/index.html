@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="未知的世界">
 <meta property="og:description" content="你是不是早就厌倦了那些博客网站毫无美感的界面，是不是受够了无休无止的网站推送，是不是早就想建立一个属于自己的博客，却止步于复杂的教程以及一系列令人头疼的代码？那么恭喜你，这篇文章就是想以最浅显易懂的方式手把手教你搭建属于自己的博客，你只需要一点耐心，一步步跟着做就好。 Hexo作为一个快速、简洁且高效的博客框架，简直是小白们的福音，而GitHub又免去了我们额外租用并部署服务器的麻烦。因此本文将利">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-23T17:16:00.181Z">
+<meta property="og:updated_time" content="2018-01-23T17:20:36.388Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从零开始搭建博客简明教程">
 <meta name="twitter:description" content="你是不是早就厌倦了那些博客网站毫无美感的界面，是不是受够了无休无止的网站推送，是不是早就想建立一个属于自己的博客，却止步于复杂的教程以及一系列令人头疼的代码？那么恭喜你，这篇文章就是想以最浅显易懂的方式手把手教你搭建属于自己的博客，你只需要一点耐心，一步步跟着做就好。 Hexo作为一个快速、简洁且高效的博客框架，简直是小白们的福音，而GitHub又免去了我们额外租用并部署服务器的麻烦。因此本文将利">
@@ -385,21 +385,17 @@
 <li><p>安装hexo框架: 打开cmd 运行</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>新建一个文件夹，如 MyBlog</p>
-</li>
-<li><p>生成hexo模板: 进入该文件夹内，右击运行 git ，输入：</p>
+<li><p>新建一个文件夹，如 MyBlog ，进入该文件夹内，右击运行 git ，输入：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>生成完模板，安装 npm ，运行：</p>
+<li><p>生成完 hexo 模板，安装 npm ，运行：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>没错，博客的主体部分到此已经完成了，来看看效果吧。运行：</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>没错，博客的主体部分到此已经完成了，来看看效果吧。运行：<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></p>
 <p> 这时候打开浏览器，输入 localhost:4000 就可以看到博客目前的样子了。小小激动一下，然后按 Ctrl + C 就可以继续下面的操作了。</p>
 <h3 id="个性化设置（初步）"><a href="#个性化设置（初步）" class="headerlink" title="个性化设置（初步）"></a>个性化设置（初步）</h3><h4 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h4><ul>
-<li><p>下载新的主题（以( NexT 主题)[<a href="http://theme-next.iissnan.com/]为例），在根目录下运行：" target="_blank" rel="noopener">http://theme-next.iissnan.com/]为例），在根目录下运行：</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+<li>下载新的主题（以( NexT 主题)[<a href="http://theme-next.iissnan.com/]为例），在根目录下运行：" target="_blank" rel="noopener">http://theme-next.iissnan.com/]为例），在根目录下运行：</a><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <ul>
@@ -412,9 +408,9 @@
 </ul>
 <p>后续主要修改的也就是这两个文件：站点配置文件和主题配置文件。</p>
 <ul>
-<li>查看效果，可运行如下命令(以后每次想查看效果都可重复此步骤)：</li>
+<li>查看效果，可运行如下命令(以后每次想查看效果都可重复此步骤)：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
 <h4 id="站点配置"><a href="#站点配置" class="headerlink" title="站点配置"></a>站点配置</h4><ul>
 <li><p>使用编辑器打开根目录下的站点配置文件 _config.yml （Windows下不要使用记事本编辑，中文标题会出现乱码），修改字段 Site ， 注意冒号后面要有空格：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Site</span></span><br><span class="line">title: 未知的世界                //博客名称</span><br><span class="line">subtitle:</span><br><span class="line">description:  Do something cool //一句签名</span><br><span class="line">author: LulalaP                 //作者</span><br><span class="line">language: zh-Hans               //网站语言</span><br><span class="line">timezone:</span><br></pre></td></tr></table></figure>
@@ -422,13 +418,13 @@
 <li><p>在 /source 中新建文件夹并命名为 uploads , 将头像图片（如： avatar.jpg ）放到该文件夹内</p>
 </li>
 <li><p>打开 /themes/next 目录下的主题配置文件 _config.yml ，找到字段 avatar 并修改为:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">avatar: /uploads/avatar.jpg</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">avatar: /uploads/avatar.jpg</span><br></pre></td></tr></table></figure>
 <h3 id="完善博客页面"><a href="#完善博客页面" class="headerlink" title="完善博客页面"></a>完善博客页面</h3><h4 id="添加菜单"><a href="#添加菜单" class="headerlink" title="添加菜单"></a>添加菜单</h4><ul>
-<li>在主题配置文件 _configy.yml 设置中将字段 menu 中需要添加的菜单前面的注释去掉即可。如需要添加其他菜单可按需添加（注意字段的缩进）：</li>
+<li>在主题配置文件 _configy.yml 设置中将字段 menu 中需要添加的菜单前面的注释去掉即可。如需要添加其他菜单可按需添加（注意字段的缩进）：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  categories: /categories</span><br><span class="line">  archives: /archives</span><br><span class="line">  tags: /tags</span><br><span class="line">  about: /about</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  categories: /categories</span><br><span class="line">  archives: /archives</span><br><span class="line">  tags: /tags</span><br><span class="line">  about: /about</span><br></pre></td></tr></table></figure>
 <h4 id="创建分类页面"><a href="#创建分类页面" class="headerlink" title="创建分类页面"></a>创建分类页面</h4><ul>
 <li><p>新建一个页面，命名为 categories ，命令如下：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page categories</span><br></pre></td></tr></table></figure>
@@ -436,13 +432,13 @@
 <li><p>编辑刚新建的页面 /source/categories/index.md ，将页面的类型设置为 categories ，主题将自动为这个页面显示所有分类（注意保留冒号后的空格）。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">title: 分类</span><br><span class="line">date: 2018-01-23 13:37:11</span><br><span class="line"><span class="built_in">type</span>: <span class="string">"categories"</span></span><br><span class="line">comments: <span class="literal">false</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 <h4 id="创建标签云界面"><a href="#创建标签云界面" class="headerlink" title="创建标签云界面"></a>创建标签云界面</h4><ul>
-<li>新建一个页面，命名为 tags ，命令如下:</li>
-</ul>
+<li><p>新建一个页面，命名为 tags ，命令如下:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page <span class="string">"tags"</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>编辑刚新建的页面，将页面的类型设置为 tags ，主题将自动为这个页面显示标签云。</li>
-</ul>
+</li>
+<li><p>编辑刚新建的页面，将页面的类型设置为 tags ，主题将自动为这个页面显示标签云。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">title: 所有标签</span><br><span class="line">date: 2018-01-22 14:09:12</span><br><span class="line"><span class="built_in">type</span>: <span class="string">"tags"</span></span><br><span class="line">comments: <span class="literal">false</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 <h4 id="创建”关于我”页面"><a href="#创建”关于我”页面" class="headerlink" title="创建”关于我”页面"></a>创建”关于我”页面</h4><ul>
 <li>新建一个 about 页面：</li>
 </ul>
