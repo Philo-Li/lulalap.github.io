@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lulalap.com/"/>
-  <updated>2018-02-05T14:34:32.073Z</updated>
+  <updated>2018-03-12T16:18:18.114Z</updated>
   <id>http://lulalap.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Atom下如何让光标自动移动到配对符号外</title>
+    <link href="http://lulalap.com/2018/03/12/Atom%E4%B8%8B%E5%A6%82%E4%BD%95%E8%AE%A9%E5%85%89%E6%A0%87%E8%87%AA%E5%8A%A8%E7%A7%BB%E5%8A%A8%E5%88%B0%E9%85%8D%E5%AF%B9%E7%AC%A6%E5%8F%B7%E5%A4%96/"/>
+    <id>http://lulalap.com/2018/03/12/Atom下如何让光标自动移动到配对符号外/</id>
+    <published>2018-03-12T14:28:32.000Z</published>
+    <updated>2018-03-12T16:18:18.114Z</updated>
+    
+    <content type="html"><![CDATA[<p>Atom作为一款简洁优美的编辑器深受广大用户的喜爱，丰富的插件极大地提高了它的易用性。日常敲代码的人都知道，编辑器提供的符号自动配对（即括号成对输出：“”）虽然降低了出错率，但是最令人头疼的还是在输入完成后，需要再敲一个方向键才能将光标移动到括号外，而单纯移动手指是够不着方向键→的。</p><p>那么如何在Atom环境下解决光标自动移动问题？</p><a id="more"></a><h3 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h3><ul><li>Windows 10 + 64位</li><li>Atom</li></ul><h3 id="修改init-script文件"><a href="#修改init-script文件" class="headerlink" title="修改init script文件"></a>修改init script文件</h3><ul><li>在 Atom 编辑器中，用 Ctrl + Shift + P 呼出 Command Palette 窗口<br><img src="/images/Atom_cursor/1.jpg" alt=""></li><li>在窗口搜索框输入 init script , 点击 Application: Open Your Init Script<br><img src="/images/Atom_cursor/2.jpg" alt=""></li><li>在打开的文件里粘贴以下代码：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># move cursor across the ending symbols...</span></span><br><span class="line">EndingSymbolRegex = /\s*[)&#125;&gt;\]/<span class="string">'"`;:=-]/</span></span><br><span class="line"><span class="string">atom.commands.add '</span>atom-text-editor<span class="string">', '</span>custom:jump-over-symbol<span class="string">': (event) -&gt;</span></span><br><span class="line"><span class="string">  editor = atom.workspace.getActiveTextEditor()</span></span><br><span class="line"><span class="string">  cursorMoved = false</span></span><br><span class="line"><span class="string">  for cursor in editor.getCursors()</span></span><br><span class="line"><span class="string">    range = cursor.getCurrentWordBufferRange(wordRegex: EndingSymbolRegex)</span></span><br><span class="line"><span class="string">    unless range.isEmpty()</span></span><br><span class="line"><span class="string">      cursor.setBufferPosition(range.end)</span></span><br><span class="line"><span class="string">      cursorMoved = true</span></span><br><span class="line"><span class="string">  event.abortKeyBinding() unless cursorMoved</span></span><br></pre></td></tr></table></figure></li></ul><h3 id="修改快捷键键位"><a href="#修改快捷键键位" class="headerlink" title="修改快捷键键位"></a>修改快捷键键位</h3><ul><li>在 Atom 编辑器中，用 Ctrl + Shift + P 呼出 Command Palette 窗口</li><li>在窗口搜索框输入 keymap , 点击 Application: Open Your keymap<br><img src="/images/Atom_cursor/3.jpg" alt=""></li><li><p>在打开的文件底部增加如下代码：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"atom-text-editor:not([mini])"</span>:</span><br><span class="line">  <span class="string">"tab"</span>: <span class="string">"custom:jump-over-symbol"</span></span><br></pre></td></tr></table></figure></li><li><p>“tab” 可更换成自己习惯的其他快捷键，如”shift”, “enter”, 或者”shift-enter”</p></li></ul><h3 id="更新设置"><a href="#更新设置" class="headerlink" title="更新设置"></a>更新设置</h3><ul><li>在 Atom 编辑器中，用 Ctrl + Shift + P 呼出 Command Palette 窗口</li><li>输入 reload, 选择 Window: Reload<br><img src="/images/Atom_cursor/4.jpg" alt=""></li></ul><p>接下来就可以愉快地玩耍啦！</p><h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><p><a href="https://jetorz.github.io/2017-02-07-Skill-Atom-auto-pair.html" target="_blank" rel="noopener">技巧卡：怎样让 Atom 将光标自动移动到配对符号外</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Atom作为一款简洁优美的编辑器深受广大用户的喜爱，丰富的插件极大地提高了它的易用性。日常敲代码的人都知道，编辑器提供的符号自动配对（即括号成对输出：“”）虽然降低了出错率，但是最令人头疼的还是在输入完成后，需要再敲一个方向键才能将光标移动到括号外，而单纯移动手指是够不着方向键→的。&lt;/p&gt;
+&lt;p&gt;那么如何在Atom环境下解决光标自动移动问题？&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="日常折腾" scheme="http://lulalap.com/categories/%E6%97%A5%E5%B8%B8%E6%8A%98%E8%85%BE/"/>
+    
+    
+      <category term="Atom" scheme="http://lulalap.com/tags/Atom/"/>
+    
+  </entry>
   
   <entry>
     <title>从零开始搭建博客简明教程</title>
