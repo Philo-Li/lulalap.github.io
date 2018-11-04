@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="未知的世界">
 <meta property="og:description" content="你是不是早就厌倦了那些博客网站毫无美感的界面，是不是受够了无休无止的网站推送，是不是早就想建立一个属于自己的博客，却止步于复杂的教程以及一系列令人头疼的代码？那么恭喜你，这篇文章就是想以最浅显易懂的方式手把手教你搭建属于自己的博客，你只需要一点耐心，一步步跟着做。 Hexo 作为一个快速、简洁且高效的博客框架，简直是小白们的福音，而 GitHub 又免去了我们额外租用并部署服务器的麻烦。因此本文将">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-05T14:34:32.073Z">
+<meta property="og:updated_time" content="2018-11-04T12:29:03.743Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从零开始搭建博客简明教程">
 <meta name="twitter:description" content="你是不是早就厌倦了那些博客网站毫无美感的界面，是不是受够了无休无止的网站推送，是不是早就想建立一个属于自己的博客，却止步于复杂的教程以及一系列令人头疼的代码？那么恭喜你，这篇文章就是想以最浅显易懂的方式手把手教你搭建属于自己的博客，你只需要一点耐心，一步步跟着做。 Hexo 作为一个快速、简洁且高效的博客框架，简直是小白们的福音，而 GitHub 又免去了我们额外租用并部署服务器的麻烦。因此本文将">
@@ -513,7 +513,7 @@
 <li><p>在根目录下安装插件</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>在主题文件的 _config.yml 里面的末尾添加：(请注意在冒号后面要加一个空格，不然会发生错误！)</p>
+<li><p>在主题文件的 <em>config.yml 里面的末尾添加：(**</em>请注意在冒号后面要加一个空格，不然会发生错误！_**)</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: http://hexo.io/plugins/</span></span><br><span class="line">plugins: hexo-generate-feed</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>打开 next 主题文件夹里面的 _config.yml ,在在 rss: 的后面加上 /atom.xml (注意在冒号后面要加一个空格)</p>
@@ -525,13 +525,11 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--more--&gt;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>将主题目录下配置文件里的 scroll_to_more 这个选项设置为 false 。</p>
-<p>效果如图：（待添加）</p>
 </li>
 </ul>
 <h4 id="设定站点建立时间"><a href="#设定站点建立时间" class="headerlink" title="设定站点建立时间"></a>设定站点建立时间</h4><ul>
 <li><p>编辑站点的 _config.yml ，新增字段 since 。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">since: 2013</span><br></pre></td></tr></table></figure>
-<p>效果如图：（待添加）</p>
 </li>
 </ul>
 <h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><p><a href="https://neveryu.github.io/2016/09/30/hexo-next-two/" target="_blank" rel="noopener">Hexo-NexT搭建个人博客（二）</a><br><a href="https://www.jianshu.com/p/f054333ac9e6" target="_blank" rel="noopener">hexo的next主题个性化教程:打造炫酷网站</a></p>
