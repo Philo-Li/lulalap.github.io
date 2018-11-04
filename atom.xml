@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lulalap.com/"/>
-  <updated>2018-11-04T13:49:43.018Z</updated>
+  <updated>2018-11-04T14:14:19.588Z</updated>
   <id>http://lulalap.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>解决AttributeError:&#39;NoneType&#39; object has no attribute &#39;find_all&#39;</title>
+    <title>【已解决】 AttributeError:&#39;NoneType&#39; object has no attribute &#39;find_all&#39;</title>
     <link href="http://lulalap.com/2018/11/04/%E8%A7%A3%E5%86%B3AttributeError-NoneType-object-has-no-attribute-find-all/"/>
     <id>http://lulalap.com/2018/11/04/解决AttributeError-NoneType-object-has-no-attribute-find-all/</id>
     <published>2018-11-04T13:35:10.000Z</published>
-    <updated>2018-11-04T13:49:43.018Z</updated>
+    <updated>2018-11-04T14:14:19.588Z</updated>
     
     <content type="html"><![CDATA[<h3 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h3><p>当像这样使用 BeautifulSoup 时，会遇到报错信息：<strong> AttributeError:’’NoneType’’ object has no attribute ‘’find_all’’’ </strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">soup = BeautifulSoup(html,features=<span class="string">'lxml'</span>)</span><br><span class="line">content = soup.find(<span class="string">'article'</span>, &#123;<span class="string">"class"</span>:<span class="string">'post post-type-normal'</span>&#125;)</span><br><span class="line">d_body = content.find_all(<span class="string">'li'</span>)</span><br></pre></td></tr></table></figure></p><a id="more"></a><h3 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h3><p>查了很多博客，但是都没说到点上，最后找到了。其实是 soup.find() 里的参数不对，没有匹配到任何信息，导致上一步得到的 content 是空的，因此后面会报错。调整了一下参数，完美运行。</p>]]></content>
     
