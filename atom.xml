@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lulalap.com/"/>
-  <updated>2018-11-04T14:14:19.588Z</updated>
+  <updated>2018-11-04T12:04:52.023Z</updated>
   <id>http://lulalap.com/</id>
   
   <author>
@@ -15,28 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>【已解决】 AttributeError:&#39;NoneType&#39; object has no attribute &#39;find_all&#39;</title>
-    <link href="http://lulalap.com/2018/11/04/%E8%A7%A3%E5%86%B3AttributeError-NoneType-object-has-no-attribute-find-all/"/>
-    <id>http://lulalap.com/2018/11/04/解决AttributeError-NoneType-object-has-no-attribute-find-all/</id>
-    <published>2018-11-04T13:35:10.000Z</published>
-    <updated>2018-11-04T14:14:19.588Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h3><p>当像这样使用 BeautifulSoup 时，会遇到报错信息：<strong> AttributeError:’’NoneType’’ object has no attribute ‘’find_all’’’ </strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">soup = BeautifulSoup(html,features=<span class="string">'lxml'</span>)</span><br><span class="line">content = soup.find(<span class="string">'article'</span>, &#123;<span class="string">"class"</span>:<span class="string">'post post-type-normal'</span>&#125;)</span><br><span class="line">d_body = content.find_all(<span class="string">'li'</span>)</span><br></pre></td></tr></table></figure></p><a id="more"></a><h3 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h3><p>查了很多博客，但是都没说到点上，最后找到了。其实是 soup.find() 里的参数不对，没有匹配到任何信息，导致上一步得到的 content 是空的，因此后面会报错。调整了一下参数，完美运行。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;问题描述：&quot;&gt;&lt;a href=&quot;#问题描述：&quot; class=&quot;headerlink&quot; title=&quot;问题描述：&quot;&gt;&lt;/a&gt;问题描述：&lt;/h3&gt;&lt;p&gt;当像这样使用 BeautifulSoup 时，会遇到报错信息：&lt;strong&gt; AttributeError:’’NoneType’’ object has no attribute ‘’find_all’’’ &lt;/strong&gt;&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;soup = BeautifulSoup(html,features=&lt;span class=&quot;string&quot;&gt;&#39;lxml&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;content = soup.find(&lt;span class=&quot;string&quot;&gt;&#39;article&#39;&lt;/span&gt;, &amp;#123;&lt;span class=&quot;string&quot;&gt;&quot;class&quot;&lt;/span&gt;:&lt;span class=&quot;string&quot;&gt;&#39;post post-type-normal&#39;&lt;/span&gt;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;d_body = content.find_all(&lt;span class=&quot;string&quot;&gt;&#39;li&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="日常折腾" scheme="http://lulalap.com/categories/%E6%97%A5%E5%B8%B8%E6%8A%98%E8%85%BE/"/>
-    
-    
-      <category term="爬虫" scheme="http://lulalap.com/tags/%E7%88%AC%E8%99%AB/"/>
-    
-  </entry>
   
   <entry>
     <title>Atom下如何让光标自动移动到配对符号外</title>
