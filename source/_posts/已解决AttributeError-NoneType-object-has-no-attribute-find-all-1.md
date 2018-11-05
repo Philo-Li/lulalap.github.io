@@ -1,6 +1,6 @@
 ---
-title: 【已解决】 AttributeError: 'NoneType' object has no attribute 'find_all'
-date: 2018-11-04 21:35:10
+title: 已解决AttributeError-NoneType-object-has-no-attribute-find-all
+date: 2018-11-05 13:00:55
 tags: 爬虫
 categories: 日常折腾
 ---
