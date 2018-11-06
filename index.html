@@ -7,7 +7,7 @@
 
 <html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
-  <meta charset="UTF-8"/>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
@@ -140,7 +140,7 @@
 
 
 
-  <title>未知的世界</title>
+  <title>未知的世界</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -165,7 +165,7 @@
     
   
 
-  <div class="container sidebar-position-left 
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left 
    page-home 
  ">
     <div class="headband"></div>
@@ -816,12 +816,7 @@
 
       
         
-          <p>你是不是早就厌倦了那些博客网站毫无美感的界面，是不是受够了无休无止的网站推送，是不是早就想建立一个属于自己的博客，却止步于复杂的教程以及一系列令人头疼的代码？那么恭喜你，这篇文章就是想以最浅显易懂的方式手把手教你搭建属于自己的博客，你只需要一点耐心，一步步跟着做。</p>
-<p>Hexo 作为一个快速、简洁且高效的博客框架，简直是小白们的福音，而 GitHub 又免去了我们额外租用并部署服务器的麻烦。因此本文将利用 Hexo 及 GitHub 搭建博客。</p>
-<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ul>
-<li>下载安装 node.js （<a href="https://nodejs.org/en/" target="_blank" rel="noopener">官网下载安装</a>）</li>
-<li>下载安装 git （<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">官网下载安装</a>）</li>
-</ul>
+          <p>你是不是早就厌倦了那些博客网站毫无美感的界面，是不是受够了无休无止的网站推送，是不是早就想建立一个属于自己的博客，却止步于复杂的教程以及一系列令人头疼的代码？那么恭喜你，这篇文章就是想以最浅显易懂的方式手把手教你搭建属于自己的博客，你只需要一点耐心，一步步跟着做。<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/01/21/从零开始搭建博客/" rel="contents">
@@ -1127,6 +1122,32 @@
 
 
 
+    
+    
+    
+    
+    <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+    <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+    
+        <script type="text/javascript">
+            function showGitment(){
+                document.getElementById("gitment-display-button").style.display = "none";
+                document.getElementById("gitment-container").style.display = "block";
+                var gitment = new Gitment({
+                        id: window.location.pathname,
+                        owner: 'Lulalap',
+                        repo: 'lulalap.github.io',
+                        oauth: {
+                            client_id: '294f13aeab3ada8693b1',
+                            client_secret: 'e58856ddb85991e01c6792df2d7f6aeb76b02c2e',
+                        }});
+                gitment.render('gitment-container');
+            }
+        </script>
+    
+
+
+
   
 
 
@@ -1159,7 +1180,7 @@
         }
       });
     </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 

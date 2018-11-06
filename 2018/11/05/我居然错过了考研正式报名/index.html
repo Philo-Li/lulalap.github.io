@@ -7,7 +7,7 @@
 
 <html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
-  <meta charset="UTF-8"/>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
@@ -142,7 +142,7 @@
 
 
 
-  <title>我居然错过了考研正式报名 | 未知的世界</title>
+  <title>我居然错过了考研正式报名 | 未知的世界</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -167,7 +167,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -508,7 +508,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/闲聊/" rel="tag"># 闲聊</a>
+            <a href="/tags/闲聊/" rel="tag"><i class="fa fa-tag"></i> 闲聊</a>
           
         </div>
       
@@ -558,6 +558,11 @@
 
           
   <div class="comments" id="comments">
+    
+        
+          <div onclick="showGitment()" id="gitment-display-button">显示Gitment评论</div>
+          <div id="gitment-container" style="display:none"></div>
+        
     
   </div>
 
@@ -841,6 +846,32 @@
 
 
 
+    
+    
+    
+    
+    <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+    <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+    
+        <script type="text/javascript">
+            function showGitment(){
+                document.getElementById("gitment-display-button").style.display = "none";
+                document.getElementById("gitment-container").style.display = "block";
+                var gitment = new Gitment({
+                        id: window.location.pathname,
+                        owner: 'Lulalap',
+                        repo: 'lulalap.github.io',
+                        oauth: {
+                            client_id: '294f13aeab3ada8693b1',
+                            client_secret: 'e58856ddb85991e01c6792df2d7f6aeb76b02c2e',
+                        }});
+                gitment.render('gitment-container');
+            }
+        </script>
+    
+
+
+
   
 
 
@@ -873,7 +904,7 @@
         }
       });
     </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
