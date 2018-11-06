@@ -5,8 +5,8 @@
 # Site
 title: 未知的世界
 subtitle:
-description: Do something cool
-author: LulalaP
+description: Do Something Cool!
+author: Philo
 language: zh-Hans
 timezone:
 
@@ -77,7 +77,7 @@ theme: next
 # Socisl links
 social:
     GitHub: https://github.com/lulalap
-    Zhihu: https://www.zhihu.com/people/LulalaP
+    #Zhihu: https://www.zhihu.com/people/LulalaP
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -89,3 +89,10 @@ deploy:
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 plugins: hexo-generate-feed
+
+math:
+  engine: 'mathjax' # or 'katex'
+  mathjax:
+    # src: custom_mathjax_source
+    config:
+      # MathJax config
