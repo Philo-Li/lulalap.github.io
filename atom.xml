@@ -18,8 +18,8 @@
   
   <entry>
     <title>我居然错过了考研正式报名</title>
-    <link href="http://lulalap.com/2018/11/05/%E6%88%91%E5%B1%85%E7%84%B6%E9%94%99%E8%BF%87%E4%BA%86%E8%80%83%E7%A0%94%E6%AD%A3%E5%BC%8F%E6%8A%A5%E5%90%8D/"/>
-    <id>http://lulalap.com/2018/11/05/我居然错过了考研正式报名/</id>
+    <link href="http://lulalap.com/2018/11/05/I-Missed-A-Important-Test/"/>
+    <id>http://lulalap.com/2018/11/05/I-Missed-A-Important-Test/</id>
     <published>2018-11-05T12:53:13.000Z</published>
     <updated>2018-11-06T13:10:26.914Z</updated>
     
@@ -39,31 +39,9 @@
   </entry>
   
   <entry>
-    <title>已解决 AttributeError:&#39;NoneType&#39; object has no attribute &#39;find_all&#39;</title>
-    <link href="http://lulalap.com/2018/11/05/%E5%B7%B2%E8%A7%A3%E5%86%B3AttributeError-NoneType-object-has-no-attribute-find-all-1/"/>
-    <id>http://lulalap.com/2018/11/05/已解决AttributeError-NoneType-object-has-no-attribute-find-all-1/</id>
-    <published>2018-11-05T05:00:55.000Z</published>
-    <updated>2018-11-06T07:43:37.066Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h3><p>当像这样使用 BeautifulSoup 时，会遇到报错信息：<strong> AttributeError: ‘NoneType’ object has no attribute ‘find_all’ </strong><br><a id="more"></a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">soup = BeautifulSoup(html,features=<span class="string">'lxml'</span>)</span><br><span class="line">content = soup.find(<span class="string">'article'</span>, &#123;<span class="string">"class"</span>:<span class="string">'post post-type-normal'</span>&#125;)</span><br><span class="line">d_body = content.find_all(<span class="string">'li'</span>)</span><br></pre></td></tr></table></figure></p><h3 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h3><p>查了很多博客，但是都没说到点上，最后找到了。其实是 soup.find() 里的参数不对，没有匹配到任何信息，导致上一步得到的 content 是空的，因此后面会报错。调整了一下参数，完美运行。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;问题描述：&quot;&gt;&lt;a href=&quot;#问题描述：&quot; class=&quot;headerlink&quot; title=&quot;问题描述：&quot;&gt;&lt;/a&gt;问题描述：&lt;/h3&gt;&lt;p&gt;当像这样使用 BeautifulSoup 时，会遇到报错信息：&lt;strong&gt; AttributeError: ‘NoneType’ object has no attribute ‘find_all’ &lt;/strong&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="日常折腾" scheme="http://lulalap.com/categories/%E6%97%A5%E5%B8%B8%E6%8A%98%E8%85%BE/"/>
-    
-    
-      <category term="爬虫" scheme="http://lulalap.com/tags/%E7%88%AC%E8%99%AB/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Atom下如何让光标自动移动到配对符号外</title>
-    <link href="http://lulalap.com/2018/03/12/Atom%E4%B8%8B%E5%A6%82%E4%BD%95%E8%AE%A9%E5%85%89%E6%A0%87%E8%87%AA%E5%8A%A8%E7%A7%BB%E5%8A%A8%E5%88%B0%E9%85%8D%E5%AF%B9%E7%AC%A6%E5%8F%B7%E5%A4%96/"/>
-    <id>http://lulalap.com/2018/03/12/Atom下如何让光标自动移动到配对符号外/</id>
+    <link href="http://lulalap.com/2018/03/12/Automatically-Move-the-cursor-outside-the-brackets-in-Atom/"/>
+    <id>http://lulalap.com/2018/03/12/Automatically-Move-the-cursor-outside-the-brackets-in-Atom/</id>
     <published>2018-03-12T14:28:32.000Z</published>
     <updated>2018-11-04T12:04:52.023Z</updated>
     
@@ -85,8 +63,8 @@
   
   <entry>
     <title>从零开始搭建博客简明教程</title>
-    <link href="http://lulalap.com/2018/01/21/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://lulalap.com/2018/01/21/从零开始搭建博客/</id>
+    <link href="http://lulalap.com/2018/01/21/Building-A-Blog-From-Scratch/"/>
+    <id>http://lulalap.com/2018/01/21/Building-A-Blog-From-Scratch/</id>
     <published>2018-01-21T12:57:57.000Z</published>
     <updated>2018-11-06T14:30:12.355Z</updated>
     
