@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/favicon.ico?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Python," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="未知的世界" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="这两天在看这本 Data Science from Scrach ( PDF地址 )，是本不错的通俗易懂的数据科学入门书籍。其中一个章节介绍了一下 Python 的基础语法和数据科学常用的进阶语法，觉得介绍得不错，很简洁明了，所以将其翻译一下放在这里以作备忘。数据科学中常用的 Python 语法(基础)数据科学中常用的 Python 语法(进阶)">
+<meta name="keywords" content="Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据科学中常用的 Python 语法(进阶)">
+<meta property="og:url" content="http://lulalap.com/2018/11/09/python-tutorails-advanced-level/index.html">
+<meta property="og:site_name" content="未知的世界">
+<meta property="og:description" content="这两天在看这本 Data Science from Scrach ( PDF地址 )，是本不错的通俗易懂的数据科学入门书籍。其中一个章节介绍了一下 Python 的基础语法和数据科学常用的进阶语法，觉得介绍得不错，很简洁明了，所以将其翻译一下放在这里以作备忘。数据科学中常用的 Python 语法(基础)数据科学中常用的 Python 语法(进阶)">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-11-10T06:36:41.590Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数据科学中常用的 Python 语法(进阶)">
+<meta name="twitter:description" content="这两天在看这本 Data Science from Scrach ( PDF地址 )，是本不错的通俗易懂的数据科学入门书籍。其中一个章节介绍了一下 Python 的基础语法和数据科学常用的进阶语法，觉得介绍得不错，很简洁明了，所以将其翻译一下放在这里以作备忘。数据科学中常用的 Python 语法(基础)数据科学中常用的 Python 语法(进阶)">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://lulalap.com/2018/11/09/python-tutorails-advanced-level/"/>
+
+
+
+
+
+  <title>数据科学中常用的 Python 语法(进阶) | 未知的世界</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">未知的世界</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lulalap.com/2018/11/09/python-tutorails-advanced-level/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Philo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="未知的世界">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">数据科学中常用的 Python 语法(进阶)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-09T20:45:01+08:00">
+                2018-11-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据科学/" itemprop="url" rel="index">
+                    <span itemprop="name">数据科学</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/11/09/python-tutorails-advanced-level/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/11/09/python-tutorails-advanced-level/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>这两天在看这本 <em><a href="https://book.douban.com/subject/26364377/" target="_blank" rel="noopener">Data Science from Scrach</a></em> ( <a href="http://www.zhanjunlang.com/resources/tutorial/Data%20Science%20from%20Scratch%20First%20Principles%20with%20Python.pdf" target="_blank" rel="noopener">PDF地址</a> )，是本不错的通俗易懂的数据科学入门书籍。其中一个章节介绍了一下 Python 的基础语法和数据科学常用的进阶语法，觉得介绍得不错，很简洁明了，所以将其翻译一下放在这里以作备忘。<br><a href="http://lulalap.com/2018/11/07/python-tutorails-basic-level/">数据科学中常用的 Python 语法(基础)</a><br><a href="http://lulalap.com/2018/11/09/python-tutorails-advanced-level/">数据科学中常用的 Python 语法(进阶)</a><br><a id="more"></a></p>
+<p>本章侧重于介绍在数据处理中非常有用的 Python 进阶语法和功能（基于 Python 2.7 ）。</p>
+<h3 id="排序-Sorting"><a href="#排序-Sorting" class="headerlink" title="排序 Sorting"></a>排序 Sorting</h3><p>如果你想对 Python 的列表进行排序，可以使用列表的 <em>sort</em> 方法。如果你不想破坏原列表，可以使用 <em>sorted</em> 函数返回一个新的排好序的列表:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">4</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">y = sorted(x)       <span class="comment"># y = [1,2,3,4], x 不变</span></span><br><span class="line">x.sort()            <span class="comment"># 当前 x = [1,2,3,4]</span></span><br></pre></td></tr></table></figure>
+<p><em>sort</em> 或 <em>sorted</em> 是默认从小到大对列表进行排序的。</p>
+<p>如果想让它从大到小排序，可以指定一个 <em>reverse = True</em> 的参数。</p>
+<p>也可以自定义排序函数，让列表按照指定关键字进行排序:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 按照绝对值从大到小排序</span></span><br><span class="line">x = sorted([<span class="number">-4</span>,<span class="number">1</span>,<span class="number">-2</span>,<span class="number">3</span>], key=abs, reverse=<span class="keyword">True</span>) <span class="comment"># is [-4,3,-2,1]</span></span><br><span class="line"><span class="comment"># 按照单词出现的次数从大到小进行排序</span></span><br><span class="line">          wc = sorted(word_counts.items(),</span><br><span class="line">          key=<span class="keyword">lambda</span> (word, count): count,</span><br><span class="line">          reverse=<span class="keyword">True</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="列表解析-List-Comprehensions"><a href="#列表解析-List-Comprehensions" class="headerlink" title="列表解析 List Comprehensions"></a>列表解析 List Comprehensions</h3><p>我们会经常遇到这样的情况，想要提取列表中特定几个元素组成新的列表，或是改变其中几个元素的值，或者皆有。Python 中的惯用做法就是 <em>列表解析（List Comprehensions）</em> :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">even_numbers = [x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">5</span>) <span class="keyword">if</span> x % <span class="number">2</span> == <span class="number">0</span>]  <span class="comment"># [0, 2, 4]</span></span><br><span class="line">squares = [x * x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">5</span>)]                 <span class="comment"># [0, 1, 4, 9, 16]</span></span><br><span class="line">even_squares = [x * x <span class="keyword">for</span> x <span class="keyword">in</span> even_numbers]        <span class="comment"># [0, 4, 16]</span></span><br></pre></td></tr></table></figure>
+<p>类似地你可以将列表变成字典或集合:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">square_dict = &#123; x : x * x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">5</span>) &#125;       <span class="comment"># &#123; 0:0, 1:1, 2:4, 3:9, 4:16 &#125;</span></span><br><span class="line">square_set = &#123; x * x <span class="keyword">for</span> x <span class="keyword">in</span> [<span class="number">1</span>, <span class="number">-1</span>] &#125;             <span class="comment"># &#123; 1 &#125;</span></span><br></pre></td></tr></table></figure>
+<p>如果你不需要使用到列表中的元素，那么可以将下划线当作变量:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zeroes = [<span class="number">0</span> <span class="keyword">for</span> _ <span class="keyword">in</span> even_numbers] <span class="comment"># 与列表 even_numbers 有相同的长度</span></span><br></pre></td></tr></table></figure>
+<p>列表解析支持多重 for 循环:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pairs = [(x, y)</span><br><span class="line">         <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">10</span>)</span><br><span class="line">         <span class="keyword">for</span> y <span class="keyword">in</span> range(<span class="number">10</span>)]    <span class="comment"># 共100对： (0,0) (0,1) ... (9,8), (9,9)</span></span><br></pre></td></tr></table></figure>
+<p>后面的 for 循环可以使用前面 for 循环的结果:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">increasing_pairs = [(x, y)                      <span class="comment"># 只包含 x &lt; y 的数据对</span></span><br><span class="line">                    <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">10</span>)          <span class="comment"># range(lo, hi) equals</span></span><br><span class="line">                    <span class="keyword">for</span> y <span class="keyword">in</span> range(x + <span class="number">1</span>, <span class="number">10</span>)]  <span class="comment"># [lo, lo + 1, ..., hi - 1]</span></span><br></pre></td></tr></table></figure>
+<p>未来我们将会经常用到列表解析。</p>
+<h3 id="生成器和迭代器-Generators-and-Iterators"><a href="#生成器和迭代器-Generators-and-Iterators" class="headerlink" title="生成器和迭代器 Generators and Iterators"></a>生成器和迭代器 Generators and Iterators</h3><p>列表有一个问题就是一不小心就会变得非常庞大，比如 range(1000000) 将会生成一个具有一百万个元素的列表。如果一次只处理一个数据，耗时可能会过长（或内存耗尽）。而实际上你可能只用到前几个数据，这样其他运算就是多余的。</p>
+<p>而生成器可以让你只迭代那些需要用到的数据。可以使用函数和 <em>yield</em> 表达式来创建一个生成器:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">lazy_range</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="string">"""a lazy version of range"""</span></span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> i &lt; n:</span><br><span class="line">        <span class="keyword">yield</span> i</span><br><span class="line">        i += <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>译者补充：<br>生成器也是一种特殊迭代器，yield 是生成器实现迭代的关键。它作为生成器执行的暂停恢复点，可以对 yield 表达式进行赋值，也可以将 yield 表达式的值返回。任何包含 yield 语句的函数被称为生成器。跳出生成器时，生成器将当前执行状态保存，并在下次执行时恢复现场，以获得下一个迭代值。采用列表迭代将会占用大量地址空间，而使用生成器差不多只占用一个地址空间，从而达到节约内存的效果。</p>
+<p>下面这个循环将一次消耗一个 yield 中的值直到消耗完毕:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> lazy_range(<span class="number">10</span>):</span><br><span class="line">    do_something_with(i)</span><br></pre></td></tr></table></figure>
+<p>(事实上 Python 自带了一个实现如上 _lazy_range_ 效果的函数，称为 <em>xrange</em>, Python 3 中称为 <em>lazy</em>.) 这意味着你可以创建一个无穷数列:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">natural_numbers</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="string">"""返回 1, 2, 3, ..."""</span></span><br><span class="line">    n = <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">        <span class="keyword">yield</span> n</span><br><span class="line">        n += <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>不过并不建议使用这种没有退出循环逻辑的语句。</p>
+<ul>
+<li>TIP<br>使用生成器迭代的一个缺点就是，从头到尾对元素只能迭代一次，如果想实现多次迭代，你只能每次都创建新的生成器或者使用列表。</li>
+</ul>
+<p>第二种创建生成器的方法：利用括号内的解析表达式:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lazy_evens_below_20 = (i <span class="keyword">for</span> i <span class="keyword">in</span> lazy_range(<span class="number">20</span>) <span class="keyword">if</span> i % <span class="number">2</span> == <span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+<p>我们知道字典中的 <em>items()</em> 方法将返回一列表的字典中全部的键值对，但更多情况下，我们使用 <em>iteritems()</em> 生成器方法来进行迭代，每次只产生并返回一个键值对。</p>
+<h3 id="随机-Randomness"><a href="#随机-Randomness" class="headerlink" title="随机 Randomness"></a>随机 Randomness</h3><p>在学习数据科学的时候，我们将会经常需要生成随机数，所以只要导入 <em>random</em> 模块就能使用:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line">four_uniform_randoms = [random.random() <span class="keyword">for</span> _ <span class="keyword">in</span> range(<span class="number">4</span>)]</span><br><span class="line"><span class="comment"># [0.8444218515250481,        # random.random() 生成随机数</span></span><br><span class="line"><span class="comment"># 0.7579544029403025,         # 随机数被标准化处理，范围介于 0 和 1 之间</span></span><br><span class="line"><span class="comment"># 0.420571580830845,          # 该函数是最常用的用于生成随机数的函数</span></span><br><span class="line"><span class="comment"># 0.25891675029296335]</span></span><br></pre></td></tr></table></figure>
+<p>如果你想获得可重现的结果，可以让 <em>random</em> 模块基于 <em>random.seed</em> 设置的内部状态生成伪随机（即确定性）数字:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">random.seed(<span class="number">10</span>)           <span class="comment"># set the seed to 10</span></span><br><span class="line"><span class="keyword">print</span> random.random()     <span class="comment"># 0.57140259469</span></span><br><span class="line">random.seed(<span class="number">10</span>)           <span class="comment"># reset the seed to 10</span></span><br><span class="line"><span class="keyword">print</span> random.random()     <span class="comment"># 0.57140259469 again</span></span><br></pre></td></tr></table></figure>
+<p>有时候我们也会使用 <em>random.randrange</em> 函数来生成一个指定范围内的随机数:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">random.randrange(<span class="number">10</span>)      <span class="comment"># 从 range(10) = [0, 1, ..., 9] 中随机选择一个数</span></span><br><span class="line">random.randrange(<span class="number">3</span>, <span class="number">6</span>)    <span class="comment"># 从 range(3, 6) = [3, 4, 5] 随机选择一个数</span></span><br></pre></td></tr></table></figure>
+<p>还有一些方法有时候用起来很方便，比如 <em>random.shuffle</em> 将打乱一个列表中的元素次序，重新生成一个随机排列的列表:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">up_to_ten = range(<span class="number">10</span>)</span><br><span class="line">random.shuffle(up_to_ten)</span><br><span class="line"><span class="keyword">print</span> up_to_ten</span><br><span class="line"><span class="comment"># [2, 5, 1, 9, 7, 3, 8, 6, 4, 0] (你得到的结果应该不同)</span></span><br></pre></td></tr></table></figure>
+<p>如果想从一个列表中随机选择一个元素，可以使用 <em>random.choice</em> 方法:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">my_best_friend = random.choice([<span class="string">"Alice"</span>, <span class="string">"Bob"</span>, <span class="string">"Charlie"</span>]) <span class="comment"># 我得到的是 "Bob"</span></span><br></pre></td></tr></table></figure>
+<p>如果既想要生成一个随机序列，又不想打乱原列表，可以使用 <em>random.sample</em> 方法:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lottery_numbers = range(<span class="number">60</span>)</span><br><span class="line">winning_numbers = random.sample(lottery_numbers, <span class="number">6</span>) <span class="comment"># [16, 36, 10, 6, 25, 9]</span></span><br></pre></td></tr></table></figure>
+<p>你可以通过多次调用实现多个随机样本的选择（允许重复）:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">four_with_replacement = [random.choice(range(<span class="number">10</span>))</span><br><span class="line">                         <span class="keyword">for</span> _ <span class="keyword">in</span> range(<span class="number">4</span>)]</span><br><span class="line"><span class="comment"># [9, 4, 4, 2]</span></span><br></pre></td></tr></table></figure>
+<h3 id="正则表达式-Regular-Expressions"><a href="#正则表达式-Regular-Expressions" class="headerlink" title="正则表达式 Regular Expressions"></a>正则表达式 Regular Expressions</h3><p>正则表达式用于文本搜索，略显复杂但非常有用，因而有大量的书专门讲解正则表达式。我们遇到它们的时候再进行具体的解释，下面是一些在 Python 中使用正则表达式的例子:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">print</span> all([                                 <span class="comment"># 下面的表述全部返回 true, 因为</span></span><br><span class="line">    <span class="keyword">not</span> re.match(<span class="string">"a"</span>, <span class="string">"cat"</span>),               <span class="comment"># * 'cat' 不以 'a' 开头</span></span><br><span class="line">    re.search(<span class="string">"a"</span>, <span class="string">"cat"</span>),                  <span class="comment"># * 'cat' 中包含了字母 'a'</span></span><br><span class="line">    <span class="keyword">not</span> re.search(<span class="string">"c"</span>, <span class="string">"dog"</span>),              <span class="comment"># * 'dog' 中不包含字母 'c'</span></span><br><span class="line">    <span class="number">3</span> == len(re.split(<span class="string">"[ab]"</span>, <span class="string">"carbs"</span>)),    <span class="comment"># * 根据 a 或 b 将单词拆分成三部分 ['c','r','s']</span></span><br><span class="line">    <span class="string">"R-D-"</span> == re.sub(<span class="string">"[0-9]"</span>, <span class="string">"-"</span>, <span class="string">"R2D2"</span>)  <span class="comment"># * 用短横替换数字</span></span><br><span class="line">    ])                                      <span class="comment"># 输出 True</span></span><br></pre></td></tr></table></figure>
+<h3 id="面向对象编程-Object-Oriented-Programming"><a href="#面向对象编程-Object-Oriented-Programming" class="headerlink" title="面向对象编程 Object-Oriented Programming"></a>面向对象编程 Object-Oriented Programming</h3><p>与许多语言一样，Python 允许你定义封装数据的类和对其进行操作的函数。我们有时会使用它们来使我们的代码更清晰简洁。通过构建一个带有大量注释的示例来解释它们可能是最简单的。假设没有内置的 Python 集合，我们可能想要创建自己的 <em>Set</em> 类。那么这个类应当具备哪些功能呢？比如给定一个 <em>Set</em> ，我们需要能够向其中添加项目，从中删除项目，并检查它是否包含特定值。所以，我们将创建所有这些功能将其作为该类的成员函数。这样，我们就可以在 <em>Set</em> 对象之后用点访问这些成员函数:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 按照惯例，我们给出 _PascalCase_ 类的名称</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Set</span>:</span></span><br><span class="line">    <span class="comment"># 这些是成员函数</span></span><br><span class="line">    <span class="comment"># 每个成员函数都有一个置于首位的"self"参数(另一个惯例)</span></span><br><span class="line">    <span class="comment"># “self”对应于正在使用的特定的 Set 对象</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, values=None)</span>:</span></span><br><span class="line">        <span class="string">"""这是创建函数</span></span><br><span class="line"><span class="string">        每当你创建一个新的 Set 就会调用该函数</span></span><br><span class="line"><span class="string">        可以像这样调用</span></span><br><span class="line"><span class="string">        s1 = Set() # 空集合</span></span><br><span class="line"><span class="string">        s2 = Set([1,2,2,3]) # 根据指定值初始化集合"""</span></span><br><span class="line">        self.dict = &#123;&#125; <span class="comment"># Set 中的每个实例都有自己的 dict 属性</span></span><br><span class="line">        <span class="comment"># 我们使用该属性追踪每个成员</span></span><br><span class="line">        <span class="keyword">if</span> values <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">None</span>:</span><br><span class="line">            <span class="keyword">for</span> value <span class="keyword">in</span> values:</span><br><span class="line">            self.add(value)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__repr__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""这是 Set 对象中的字符串表达式</span></span><br><span class="line"><span class="string">        你可以通过向 Python 命令窗口键入字符串或者利用 str() 方法向对象传递字符串"""</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">"Set: "</span> + str(self.dict.keys())</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 我们将通过成为 self.dict 中的键，并将键值设为 True 来表示成员资格</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(self, value)</span>:</span></span><br><span class="line">        self.dict[value] = <span class="keyword">True</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 如果参数为字典中的键，对应的值就在 Set 中</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">contains</span><span class="params">(self, value)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> value <span class="keyword">in</span> self.dict</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">remove</span><span class="params">(self, value)</span>:</span></span><br><span class="line">        <span class="keyword">del</span> self.dict[value]</span><br></pre></td></tr></table></figure>
+<p>然后我们就可以像这样使用 Set:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">s = Set([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br><span class="line">s.add(<span class="number">4</span>)</span><br><span class="line"><span class="keyword">print</span> s.contains(<span class="number">4</span>)     <span class="comment"># True</span></span><br><span class="line">s.remove(<span class="number">3</span>)</span><br><span class="line"><span class="keyword">print</span> s.contains(<span class="number">3</span>)     <span class="comment"># False</span></span><br></pre></td></tr></table></figure>
+<h3 id="函数工具-Functional-Tools"><a href="#函数工具-Functional-Tools" class="headerlink" title="函数工具 Functional Tools"></a>函数工具 Functional Tools</h3><h4 id="部分函数-partial"><a href="#部分函数-partial" class="headerlink" title="部分函数 partial"></a>部分函数 partial</h4><p>当传递函数时，有时我们会想要使用某函数的部分功能以创建新函数。举个简单的例子，假设我们有两个变量的函数:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">exp</span><span class="params">(base, power)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> base ** power</span><br></pre></td></tr></table></figure>
+<p>我们想要利用它来创建一个函数，该函数输入一个变量，输出底数为 2 的幂函数 <em>exp(2, power)</em> 的结果。</p>
+<p>当然，我们可以用 <em>def</em> 定义一个新的函数，虽然这看起来不太明智:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">two_to_the</span><span class="params">(power)</span>:</span></span><br><span class="line">  <span class="keyword">return</span> exp(<span class="number">2</span>, power)</span><br></pre></td></tr></table></figure>
+<p>更聪明的做法是利用 <em>functools.partial</em> 方法:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> partial</span><br><span class="line">two_to_the = partial(exp, <span class="number">2</span>)      <span class="comment"># 当前函数只有一个变量</span></span><br><span class="line"><span class="keyword">print</span> two_to_the(<span class="number">3</span>)               <span class="comment"># 8</span></span><br></pre></td></tr></table></figure>
+<p>如果指定了名称，也可以使用 <em>partial</em> 方法填充其他的参数:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">square_of = partial(exp, power=<span class="number">2</span>)</span><br><span class="line"><span class="keyword">print</span> square_of(<span class="number">3</span>)                <span class="comment"># 9</span></span><br></pre></td></tr></table></figure>
+<p>如果你尝试在函数中间乱用参数，那么程序将很快就会变得混乱，所以请尽量避免这种行为。</p>
+<h4 id="映射-map"><a href="#映射-map" class="headerlink" title="映射 map"></a>映射 map</h4><p>我们偶尔也会使用 <em>map</em>，<em>reduce</em>，和 <em>filter</em> 等函数来作为列表解析的功能替代:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">double</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">2</span> * x</span><br><span class="line"></span><br><span class="line">xs = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line">twice_xs = [double(x) <span class="keyword">for</span> x <span class="keyword">in</span> xs]      <span class="comment"># [2, 4, 6, 8]</span></span><br><span class="line">twice_xs = map(double, xs)              <span class="comment"># 同上</span></span><br><span class="line">list_doubler = partial(map, double)     <span class="comment"># 函数功能是将列表加倍</span></span><br><span class="line">twice_xs = list_doubler(xs)             <span class="comment"># 也是 [2, 4, 6, 8]</span></span><br></pre></td></tr></table></figure>
+<p><em>map</em> 方法还可以用于多参数函数到多列表的映射:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">multiply</span><span class="params">(x, y)</span>:</span> <span class="keyword">return</span> x * y</span><br><span class="line"></span><br><span class="line">products = map(multiply, [<span class="number">1</span>, <span class="number">2</span>], [<span class="number">4</span>, <span class="number">5</span>])  <span class="comment"># [1 * 4, 2 * 5] = [4, 10]</span></span><br></pre></td></tr></table></figure>
+<h4 id="过滤器-filter"><a href="#过滤器-filter" class="headerlink" title="过滤器 filter"></a>过滤器 filter</h4><p>类似地，过滤器实现的是列表解析中 <em>if</em> 的功能:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">is_even</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="string">"""若 x 为偶数则返回 True，x 为奇数则返回 False"""</span></span><br><span class="line">    <span class="keyword">return</span> x % <span class="number">2</span> == <span class="number">0</span></span><br><span class="line"></span><br><span class="line">x_evens = [x <span class="keyword">for</span> x <span class="keyword">in</span> xs <span class="keyword">if</span> is_even(x)]   <span class="comment"># [2, 4]</span></span><br><span class="line">x_evens = filter(is_even, xs)             <span class="comment"># 同上</span></span><br><span class="line">list_evener = partial(filter, is_even)    <span class="comment"># 该函数实现过滤功能</span></span><br><span class="line">x_evens = list_evener(xs)                 <span class="comment"># 也是 [2, 4]</span></span><br></pre></td></tr></table></figure>
+<h4 id="缩减-reduce"><a href="#缩减-reduce" class="headerlink" title="缩减 reduce"></a>缩减 reduce</h4><p><em>reduce</em> 方法不断合并列表中的第一个和第二个元素，然后将结果与第三个元素合并，并一直重复这个过程，直到得到一个唯一的结果:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x_product = reduce(multiply, xs)          <span class="comment"># = 1 * 2 * 3 * 4 = 24</span></span><br><span class="line">list_product = partial(reduce, multiply)  <span class="comment"># 该函数实现缩减一个列表</span></span><br><span class="line">x_product = list_product(xs)              <span class="comment"># 也是 24</span></span><br></pre></td></tr></table></figure>
+<h3 id="枚举-enumerate"><a href="#枚举-enumerate" class="headerlink" title="枚举 enumerate"></a>枚举 enumerate</h3><p>偶尔会出现这样的情况，在遍历一个列表的时候同时要使用元素和其索引:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 不太 Python（不太简洁优美）</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(documents)):</span><br><span class="line">    document = documents[i]</span><br><span class="line">    do_something(i, document)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 同样不太 Python（不太简洁优美）</span></span><br><span class="line">i = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> document <span class="keyword">in</span> documents:</span><br><span class="line">    do_something(i, document)</span><br><span class="line">    i += <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>最简洁的做法是使用 <em>enumerate</em> 枚举方法生成一个元组 <em>tuples (index, element)</em>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i, document <span class="keyword">in</span> enumerate(documents):</span><br><span class="line">    do_something(i, document)</span><br></pre></td></tr></table></figure>
+<p>类似地，如果只想使用索引:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(documents)): do_something(i)   <span class="comment"># 不简洁</span></span><br><span class="line"><span class="keyword">for</span> i, _ <span class="keyword">in</span> enumerate(documents): do_something(i) <span class="comment"># 简洁</span></span><br></pre></td></tr></table></figure>
+<p>后面我们将会经常使用这个方法。</p>
+<h3 id="压缩和参数解压-zip-and-Argument-Unpacking"><a href="#压缩和参数解压-zip-and-Argument-Unpacking" class="headerlink" title="压缩和参数解压 zip and Argument Unpacking"></a>压缩和参数解压 zip and Argument Unpacking</h3><h4 id="压缩-zip"><a href="#压缩-zip" class="headerlink" title="压缩 zip"></a>压缩 zip</h4><p>我们经常会对两个或更多的列表进行压缩处理。压缩实际上就是将多列表转化为对应元组的单列表形式:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">list1 = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>]</span><br><span class="line">list2 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">zip(list1, list2)       <span class="comment"># 得到 [('a', 1), ('b', 2), ('c', 3)]</span></span><br></pre></td></tr></table></figure>
+<h4 id="参数解压-Argument-Unpacking"><a href="#参数解压-Argument-Unpacking" class="headerlink" title="参数解压 Argument Unpacking"></a>参数解压 Argument Unpacking</h4><p>如果多个列表长度不一致，那么压缩过程会在最短列表尾部停止。你也可以使用一个奇怪的 “unzip” 解压缩技巧对列表进行解压:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pairs = [(<span class="string">'a'</span>, <span class="number">1</span>), (<span class="string">'b'</span>, <span class="number">2</span>), (<span class="string">'c'</span>, <span class="number">3</span>)]</span><br><span class="line">letters, numbers = zip(*pairs)</span><br></pre></td></tr></table></figure>
+<p>其中星号用于执行参数解压缩，它使用 <em>pairs</em> 的元素作为 <em>zip</em> 的单个参数。下面的调用方式具有同等效果:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zip((<span class="string">'a'</span>, <span class="number">1</span>), (<span class="string">'b'</span>, <span class="number">2</span>), (<span class="string">'c'</span>, <span class="number">3</span>))  <span class="comment"># 返回 [('a','b','c'), ('1','2','3')]</span></span><br></pre></td></tr></table></figure>
+<p>参数解压也可以和其他函数共同使用:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(a, b)</span>:</span> <span class="keyword">return</span> a + b</span><br><span class="line"></span><br><span class="line">add(<span class="number">1</span>, <span class="number">2</span>)           <span class="comment"># 返回 3</span></span><br><span class="line">add([<span class="number">1</span>, <span class="number">2</span>])         <span class="comment"># 报错</span></span><br><span class="line">add(*[<span class="number">1</span>, <span class="number">2</span>])        <span class="comment"># 返回 3</span></span><br></pre></td></tr></table></figure>
+<p>虽然不太实用，不过是个不错的让代码变得简洁的技巧。</p>
+<h3 id="不定长参数传递-args-and-kwargs"><a href="#不定长参数传递-args-and-kwargs" class="headerlink" title="不定长参数传递 args and kwargs"></a>不定长参数传递 args and kwargs</h3><p>假设我们要创建一个高阶函数，该函数输入一个旧函数，并返回一个新的函数，新函数是旧函数乘以 2 :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">doubler</span><span class="params">(f)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">g</span><span class="params">(x)</span>:</span></span><br><span class="line">      <span class="keyword">return</span> <span class="number">2</span> * f(x)</span><br><span class="line">    <span class="keyword">return</span> g</span><br></pre></td></tr></table></figure>
+<p>运行例子:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f1</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> x + <span class="number">1</span></span><br><span class="line"></span><br><span class="line">g = doubler(f1)</span><br><span class="line"><span class="keyword">print</span> g(<span class="number">3</span>)        <span class="comment"># 8 (== ( 3 + 1) * 2)</span></span><br><span class="line"><span class="keyword">print</span> g(<span class="number">-1</span>)       <span class="comment"># 0 (== (-1 + 1) * 2)</span></span><br></pre></td></tr></table></figure>
+<p>然而只要传递的参数大于一个，该方法就不太好用了:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f2</span><span class="params">(x, y)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> x + y</span><br><span class="line"></span><br><span class="line">g = doubler(f2)</span><br><span class="line"><span class="keyword">print</span> g(<span class="number">1</span>, <span class="number">2</span>) <span class="comment"># 报错 TypeError: g() takes exactly 1 argument (2 given)</span></span><br></pre></td></tr></table></figure>
+<p>所以我们需要指定一个函数，使得它能够容纳任意数量的参数，然后利用参数解压缩实现传递多个参数，这看起来有那么一点神奇:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">magic</span><span class="params">(*args, **kwargs)</span>:</span></span><br><span class="line">    <span class="keyword">print</span> <span class="string">"unnamed args:"</span>, args</span><br><span class="line">    <span class="keyword">print</span> <span class="string">"keyword args:"</span>, kwargs</span><br><span class="line">magic(<span class="number">1</span>, <span class="number">2</span>, key=<span class="string">"word"</span>, key2=<span class="string">"word2"</span>)</span><br><span class="line"><span class="comment"># 输出结果：</span></span><br><span class="line"><span class="comment"># unnamed args: (1, 2)</span></span><br><span class="line"><span class="comment"># keyword args: &#123;'key2': 'word2', 'key': 'word'&#125;</span></span><br></pre></td></tr></table></figure>
+<p>当我们像这样定义一个函数时，<em>args</em> (arguments 的缩写)是一个包含未命名参数的元组，而 <em>kwargs</em> (keyword arguments 的缩写)是包含命名参数的字典。</p>
+<p>它们也可以用在传递的参数为列表（或元组）或数组的情况：<br>n:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">other_way_magic</span><span class="params">(x, y, z)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> x + y + z</span><br><span class="line"></span><br><span class="line">x_y_list = [<span class="number">1</span>, <span class="number">2</span>]</span><br><span class="line">z_dict = &#123; <span class="string">"z"</span> : <span class="number">3</span> &#125;</span><br><span class="line"><span class="keyword">print</span> other_way_magic(*x_y_list, **z_dict)    <span class="comment"># 6</span></span><br></pre></td></tr></table></figure>
+<p>你可以用它配合各种奇怪的方法使用，但我们只用它来解决高阶函数传递不定长参数的问题:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">doubler_correct</span><span class="params">(f)</span>:</span></span><br><span class="line">    <span class="string">"""不论 f 是什么都能有效运行"""</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">g</span><span class="params">(*args, **kwargs)</span>:</span></span><br><span class="line">        <span class="string">"""不论有多少参数，该函数都能正确将参数传递给 f"""</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">2</span> * f(*args, **kwargs)</span><br><span class="line">    <span class="keyword">return</span> g</span><br><span class="line"></span><br><span class="line">g = doubler_correct(f2)</span><br><span class="line"><span class="keyword">print</span> g(<span class="number">1</span>, <span class="number">2</span>) <span class="comment"># 6</span></span><br></pre></td></tr></table></figure>
+<h3 id="欢迎来到数据科学的世界！"><a href="#欢迎来到数据科学的世界！" class="headerlink" title="欢迎来到数据科学的世界！"></a>欢迎来到数据科学的世界！</h3><p>叮！恭喜你又打开了新世界的大门！接下来就可以去愉快地玩耍啦~</p>
+<p><strong>相关阅读:</strong><br><a href="http://lulalap.com/2018/11/07/python-tutorails-basic-level/">数据科学中常用的 Python 语法(基础)</a>  </p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/07/python-tutorails-basic-level/" rel="next" title="数据科学中 Python 的常用语法(基础)">
+                <i class="fa fa-chevron-left"></i> 数据科学中 Python 的常用语法(基础)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="Philo" />
+            
+              <p class="site-author-name" itemprop="name">Philo</p>
+              <p class="site-description motion-element" itemprop="description">Do Something Cool!</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/lulalap" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#排序-Sorting"><span class="nav-number">1.</span> <span class="nav-text">排序 Sorting</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列表解析-List-Comprehensions"><span class="nav-number">2.</span> <span class="nav-text">列表解析 List Comprehensions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生成器和迭代器-Generators-and-Iterators"><span class="nav-number">3.</span> <span class="nav-text">生成器和迭代器 Generators and Iterators</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#随机-Randomness"><span class="nav-number">4.</span> <span class="nav-text">随机 Randomness</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正则表达式-Regular-Expressions"><span class="nav-number">5.</span> <span class="nav-text">正则表达式 Regular Expressions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#面向对象编程-Object-Oriented-Programming"><span class="nav-number">6.</span> <span class="nav-text">面向对象编程 Object-Oriented Programming</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数工具-Functional-Tools"><span class="nav-number">7.</span> <span class="nav-text">函数工具 Functional Tools</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#部分函数-partial"><span class="nav-number">7.1.</span> <span class="nav-text">部分函数 partial</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#映射-map"><span class="nav-number">7.2.</span> <span class="nav-text">映射 map</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#过滤器-filter"><span class="nav-number">7.3.</span> <span class="nav-text">过滤器 filter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#缩减-reduce"><span class="nav-number">7.4.</span> <span class="nav-text">缩减 reduce</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#枚举-enumerate"><span class="nav-number">8.</span> <span class="nav-text">枚举 enumerate</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#压缩和参数解压-zip-and-Argument-Unpacking"><span class="nav-number">9.</span> <span class="nav-text">压缩和参数解压 zip and Argument Unpacking</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#压缩-zip"><span class="nav-number">9.1.</span> <span class="nav-text">压缩 zip</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参数解压-Argument-Unpacking"><span class="nav-number">9.2.</span> <span class="nav-text">参数解压 Argument Unpacking</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不定长参数传递-args-and-kwargs"><span class="nav-number">10.</span> <span class="nav-text">不定长参数传递 args and kwargs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#欢迎来到数据科学的世界！"><span class="nav-number">11.</span> <span class="nav-text">欢迎来到数据科学的世界！</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Philo</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: true,
+        appId: 'XJOIB9IbA2hboJOnokoSHUgU-gzGzoHsz',
+        appKey: 'FCnu2Ra7TNWEXIJtxdswqtBw',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+
+</body>
+</html>
