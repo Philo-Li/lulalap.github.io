@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="PAT 甲级目录  |   PAT 乙级目录 题目描述">
+<meta name="description" content="PAT 甲级目录  |   PAT 乙级目录 题目描述做作业的时候，邻座的小盆友问你：“五乘以七等于多少？”你应该不失礼貌地围笑着告诉他：“五十三。”本题就要求你，对任何一对给定的正整数，倒着输出它们的乘积。">
 <meta name="keywords" content="PAT">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PAT B1002 写出这个数(C++)">
-<meta property="og:url" content="http://lulalap.com/2018/11/07/PAT-B1002-cpp/index.html">
+<meta property="og:title" content="PAT B1086 就不告诉你(C++)">
+<meta property="og:url" content="http://lulalap.com/2018/11/11/PAT-B1086-cpp/index.html">
 <meta property="og:site_name" content="未知的世界">
-<meta property="og:description" content="PAT 甲级目录  |   PAT 乙级目录 题目描述">
+<meta property="og:description" content="PAT 甲级目录  |   PAT 乙级目录 题目描述做作业的时候，邻座的小盆友问你：“五乘以七等于多少？”你应该不失礼貌地围笑着告诉他：“五十三。”本题就要求你，对任何一对给定的正整数，倒着输出它们的乘积。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-11T13:07:30.769Z">
+<meta property="og:updated_time" content="2018-11-11T13:06:54.474Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PAT B1002 写出这个数(C++)">
-<meta name="twitter:description" content="PAT 甲级目录  |   PAT 乙级目录 题目描述">
+<meta name="twitter:title" content="PAT B1086 就不告诉你(C++)">
+<meta name="twitter:description" content="PAT 甲级目录  |   PAT 乙级目录 题目描述做作业的时候，邻座的小盆友问你：“五乘以七等于多少？”你应该不失礼貌地围笑着告诉他：“五十三。”本题就要求你，对任何一对给定的正整数，倒着输出它们的乘积。">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://lulalap.com/2018/11/07/PAT-B1002-cpp/"/>
+  <link rel="canonical" href="http://lulalap.com/2018/11/11/PAT-B1086-cpp/"/>
 
 
 
 
 
-  <title>PAT B1002 写出这个数(C++) | 未知的世界</title>
+  <title>PAT B1086 就不告诉你(C++) | 未知的世界</title>
   
 
 
@@ -265,7 +265,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lulalap.com/2018/11/07/PAT-B1002-cpp/">
+    <link itemprop="mainEntityOfPage" href="http://lulalap.com/2018/11/11/PAT-B1086-cpp/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Philo">
@@ -282,7 +282,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">PAT B1002 写出这个数(C++)</h1>
+          <h1 class="post-title" itemprop="name headline">PAT B1086 就不告诉你(C++)</h1>
         
 
         <div class="post-meta">
@@ -294,8 +294,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-07T17:32:49+08:00">
-                2018-11-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-11T19:54:05+08:00">
+                2018-11-11
               </time>
             
 
@@ -335,8 +335,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/11/07/PAT-B1002-cpp/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/11/07/PAT-B1002-cpp/" itemprop="commentCount"></span>
+                <a href="/2018/11/11/PAT-B1086-cpp/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/11/11/PAT-B1086-cpp/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -370,18 +370,32 @@
 
       
         <p><a href="http://lulalap.com/2018/11/07/index-of-PAT-Advanced-Level/"> PAT 甲级目录</a>  |  <a href="http://lulalap.com/2018/11/07/index-of-PAT-Basic-Level/"> PAT 乙级目录</a></p>
-<h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><a id="more"></a>
-<p>读入一个正整数 $n$，计算其各位数字之和，用汉语拼音写出和的每一位数字。</p>
-<h4 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h4><p>每个测试输入包含 1 个测试用例，即给出自然数 $n$ 的值。这里保证 $n$ 小于 $10^{100}$ 。</p>
-<h4 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h4><p>在一行内输出 $n$ 的各位数字之和的每一位，拼音数字间有 1 空格，但一行中最后一个拼音数字后没有空格。</p>
-<h4 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1234567890987654321123456789</span><br></pre></td></tr></table></figure>
-<h4 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yi san wu</span><br></pre></td></tr></table></figure>
-<h4 id="易错点："><a href="#易错点：" class="headerlink" title="易错点："></a>易错点：</h4><ul>
-<li>注意输出末尾没有空格</li>
-<li>倒序输出</li>
+<h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>做作业的时候，邻座的小盆友问你：“五乘以七等于多少？”你应该不失礼貌地围笑着告诉他：“五十三。”本题就要求你，对任何一对给定的正整数，倒着输出它们的乘积。<br><a id="more"></a></p>
+<h4 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h4><p>输入在第一行给出两个不超过 1000 的正整数 A 和 B，其间以空格分隔。</p>
+<h4 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h4><p>在一行中倒着输出 A 和 B 的乘积。</p>
+<h4 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5 7</span><br></pre></td></tr></table></figure>
+<h4 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">53</span><br></pre></td></tr></table></figure>
+<h4 id="易错点"><a href="#易错点" class="headerlink" title="易错点"></a>易错点</h4><ul>
+<li>逆转输出不要输出前导零</li>
 </ul>
-<h4 id="也许陌生的知识点"><a href="#也许陌生的知识点" class="headerlink" title="也许陌生的知识点"></a>也许陌生的知识点</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt; //C++的字符串头文件，和 C 中的 string.h 功能不一样</span></span></span><br><span class="line">getline(<span class="built_in">cin</span>, &lt;val&gt; ) <span class="comment">// 字符串输入，能输入一整行包含空格的字符串</span></span><br></pre></td></tr></table></figure>
-<p>代码示例：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">  <span class="built_in">string</span> str[] = &#123;<span class="string">"ling"</span>, <span class="string">"yi"</span>, <span class="string">"er"</span>, <span class="string">"san"</span>, <span class="string">"si"</span>, <span class="string">"wu"</span>, <span class="string">"liu"</span>, <span class="string">"qi"</span>, <span class="string">"ba"</span>, <span class="string">"jiu"</span>&#125;;</span><br><span class="line">  <span class="keyword">int</span> n = <span class="number">0</span>, num[<span class="number">101</span>] = &#123;<span class="number">0</span>&#125;, i = <span class="number">0</span>;</span><br><span class="line">  <span class="built_in">string</span> s;</span><br><span class="line">  getline(<span class="built_in">cin</span>, s); <span class="comment">// 输入字符串类型变量</span></span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.length(); i++)&#123;</span><br><span class="line">    n += (<span class="keyword">int</span>)(s[i] - <span class="string">'0'</span>); <span class="comment">//字符转换为数字</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">while</span>(n &gt; <span class="number">0</span>)&#123;</span><br><span class="line">    num[i++] = n % <span class="number">10</span>;</span><br><span class="line">    n /= <span class="number">10</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> j = i - <span class="number">1</span>; j &gt;= <span class="number">0</span>; j--)&#123; <span class="comment">//倒序输出</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; str[num[j]];  <span class="comment">// 序号存放在num数组中</span></span><br><span class="line">    <span class="keyword">if</span>(j != <span class="number">0</span>) <span class="built_in">printf</span>(<span class="string">" "</span>); <span class="comment">// 注意末尾没有空格</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="也许陌生的知识点"><a href="#也许陌生的知识点" class="headerlink" title="也许陌生的知识点"></a>也许陌生的知识点</h4><ul>
+<li><code>G[x].push_back(y);</code><ul>
+<li>功能：往变长数组加入新元素</li>
+<li>需要头文件：<strong>vector</strong></li>
+</ul>
+</li>
+<li><code>for(auto it = s.begin(); it != s.end(); it++){ 循环体; }</code><ul>
+<li>功能：遍历一个集合，it是迭代器，*it 为迭代器指向的元素</li>
+<li>需要头文件：<strong>set</strong></li>
+</ul>
+</li>
+<li><code>s.insert(id);</code><ul>
+<li>功能：往集合中加入元素</li>
+<li>需要头文件：<strong>set</strong></li>
+</ul>
+</li>
+</ul>
+<p>代码示例：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">100000</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> N, M;</span><br><span class="line">  <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; G[maxn];</span><br><span class="line">  <span class="built_in">cin</span> &gt;&gt; N &gt;&gt; M;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++)&#123;</span><br><span class="line">    <span class="keyword">int</span> x, y;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; x &gt;&gt; y;</span><br><span class="line">    G[x].push_back(y);</span><br><span class="line">    G[y].push_back(x);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; M; i++)&#123;</span><br><span class="line">    <span class="keyword">int</span> k, id, valid = <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt; s; <span class="comment">//用一个集合暂存清单</span></span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; k;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; k; j++)&#123;</span><br><span class="line">      <span class="built_in">cin</span> &gt;&gt; id;</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> l = <span class="number">0</span>; valid == <span class="number">1</span> &amp;&amp; l &lt; G[id].size(); l++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> it = s.begin(); it != s.end(); it++)&#123;<span class="comment">//寻找当前物品是否与集合中其他物品不相容</span></span><br><span class="line">          <span class="keyword">if</span>(G[id][l] == *it)&#123; <span class="comment">//存在不相容的，记录非法并退出查找</span></span><br><span class="line">            valid = <span class="number">0</span>; <span class="keyword">break</span>;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      s.insert(id); <span class="comment">//将当前物品加入集合</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(valid == <span class="number">0</span>) <span class="built_in">cout</span> &lt;&lt; <span class="string">"No\n"</span>; <span class="comment">//非法</span></span><br><span class="line">    <span class="keyword">else</span> <span class="built_in">cout</span> &lt;&lt; <span class="string">"Yes\n"</span>;          <span class="comment">//合法</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -412,8 +426,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/07/PAT-B1001-py/" rel="next" title="PAT B1001 害死人不偿命的(3n+1)猜想(Python)">
-                <i class="fa fa-chevron-left"></i> PAT B1001 害死人不偿命的(3n+1)猜想(Python)
+              <a href="/2018/11/11/PAT-B1002-py/" rel="next" title="PAT B1002 写出这个数(Python)">
+                <i class="fa fa-chevron-left"></i> PAT B1002 写出这个数(Python)
               </a>
             
           </div>
@@ -422,8 +436,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/11/07/python-tutorails-basic-level/" rel="prev" title="数据科学中 Python 的常用语法(基础)">
-                数据科学中 Python 的常用语法(基础) <i class="fa fa-chevron-right"></i>
+              <a href="/2018/11/11/PAT-B1087-cpp/" rel="prev" title="PAT B1087 有多少不同的值(C++)">
+                PAT B1087 有多少不同的值(C++) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -580,7 +594,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输入格式："><span class="nav-number">2.</span> <span class="nav-text">输入格式：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出格式："><span class="nav-number">3.</span> <span class="nav-text">输出格式：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输入样例："><span class="nav-number">4.</span> <span class="nav-text">输入样例：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出样例："><span class="nav-number">5.</span> <span class="nav-text">输出样例：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#易错点："><span class="nav-number">6.</span> <span class="nav-text">易错点：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#也许陌生的知识点"><span class="nav-number">7.</span> <span class="nav-text">也许陌生的知识点</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输入格式："><span class="nav-number">2.</span> <span class="nav-text">输入格式：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出格式："><span class="nav-number">3.</span> <span class="nav-text">输出格式：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输入样例："><span class="nav-number">4.</span> <span class="nav-text">输入样例：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出样例："><span class="nav-number">5.</span> <span class="nav-text">输出样例：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#易错点"><span class="nav-number">6.</span> <span class="nav-text">易错点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#也许陌生的知识点"><span class="nav-number">7.</span> <span class="nav-text">也许陌生的知识点</span></a></li></ol></div>
             
 
           </div>
