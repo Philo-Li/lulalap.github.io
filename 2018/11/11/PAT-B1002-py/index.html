@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="未知的世界">
 <meta property="og:description" content="PAT 甲级目录  |   PAT 乙级目录 题目描述">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-11T13:07:36.967Z">
+<meta property="og:updated_time" content="2018-11-12T15:00:49.397Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PAT B1002 写出这个数(Python)">
 <meta name="twitter:description" content="PAT 甲级目录  |   PAT 乙级目录 题目描述">
@@ -380,8 +380,38 @@
 <li>注意输出末尾没有空格</li>
 <li>倒序输出</li>
 </ul>
-<h4 id="也许陌生的知识点"><a href="#也许陌生的知识点" class="headerlink" title="也许陌生的知识点"></a>也许陌生的知识点</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 输入字符串</span></span><br><span class="line">s = input()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将变量类型转换为整型</span></span><br><span class="line">y = int(x)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将变量类型转换为字符串型     </span></span><br><span class="line">y = str(x)</span><br><span class="line"></span><br><span class="line"><span class="comment">#同时遍历字符串中的字符以及字符的索引</span></span><br><span class="line"><span class="keyword">for</span> i, t <span class="keyword">in</span> enumerate(ans):</span><br><span class="line"></span><br><span class="line"><span class="comment"># 空格分隔输出，sep,end分别指定输出的字符串前缀和后缀</span></span><br><span class="line"><span class="comment"># 令其为空字符则输出字符串前后不带多余空格和回车。</span></span><br><span class="line"><span class="comment"># 再用索引判断令其在中间添加空格</span></span><br><span class="line">print(<span class="string">' '</span> <span class="keyword">if</span> i &gt; <span class="number">0</span> <span class="keyword">else</span> <span class="string">''</span>, li[int(t)], sep = <span class="string">''</span>, end = <span class="string">''</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 另一种空格分隔输出结果的方法（末尾不带空格）</span></span><br><span class="line"><span class="comment"># 适用于列表</span></span><br><span class="line">L = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">print(<span class="string">" "</span>.join(str(x) <span class="keyword">for</span> x <span class="keyword">in</span> L))</span><br></pre></td></tr></table></figure>
-<p>代码示例：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">li = [<span class="string">"ling"</span>, <span class="string">"yi"</span>, <span class="string">"er"</span>, <span class="string">"san"</span>, <span class="string">"si"</span>, <span class="string">"wu"</span>, <span class="string">"liu"</span>, <span class="string">"qi"</span>, <span class="string">"ba"</span>, <span class="string">"jiu"</span>]</span><br><span class="line">s = input()</span><br><span class="line">n = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> s:     <span class="comment"># 求和</span></span><br><span class="line">    n = n + int(x)</span><br><span class="line"></span><br><span class="line">ans = str(n)    <span class="comment"># 类型转换成字符串</span></span><br><span class="line"><span class="keyword">for</span> i, t <span class="keyword">in</span> enumerate(ans):  <span class="comment"># 同时遍历字符和索引</span></span><br><span class="line">    print(<span class="string">' '</span> <span class="keyword">if</span> i &gt; <span class="number">0</span> <span class="keyword">else</span> <span class="string">''</span>, li[int(t)], sep = <span class="string">''</span>, end = <span class="string">''</span>) <span class="comment"># 空格分隔输出</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="也许陌生的知识点"><a href="#也许陌生的知识点" class="headerlink" title="也许陌生的知识点"></a>也许陌生的知识点</h4><ul>
+<li><p><code>s = input()</code></p>
+<ul>
+<li>输入字符串</li>
+</ul>
+</li>
+<li><p><code>y = int(x)</code></p>
+<ul>
+<li>将变量类型转换为整型</li>
+</ul>
+</li>
+<li><p><code>y = str(x)</code></p>
+<ul>
+<li>将变量类型转换为字符串型</li>
+</ul>
+</li>
+<li><p><code>for i, t in enumerate(ans):</code></p>
+<ul>
+<li>同时遍历字符串中的字符以及字符的索引</li>
+</ul>
+</li>
+<li><p><code>print(&#39; &#39; if i &gt; 0 else &#39;&#39;, li[int(t)], sep = &#39;&#39;, end = &#39;&#39;)</code></p>
+<ul>
+<li><p>索引判断令其在中间添加空格</p>
+</li>
+<li><p>另一种空格分隔输出结果的方法（末尾不带空格，适用于列表）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">L = [1, 2, 3, 4, 5]</span><br><span class="line">print(&quot; &quot;.join(str(x) for x in L))</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="代码示例："><a href="#代码示例：" class="headerlink" title="代码示例："></a>代码示例：</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">li = [<span class="string">"ling"</span>, <span class="string">"yi"</span>, <span class="string">"er"</span>, <span class="string">"san"</span>, <span class="string">"si"</span>, <span class="string">"wu"</span>, <span class="string">"liu"</span>, <span class="string">"qi"</span>, <span class="string">"ba"</span>, <span class="string">"jiu"</span>]</span><br><span class="line">s = input()</span><br><span class="line">n = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> s:     <span class="comment"># 求和</span></span><br><span class="line">    n = n + int(x)</span><br><span class="line"></span><br><span class="line">ans = str(n)    <span class="comment"># 类型转换成字符串</span></span><br><span class="line"><span class="keyword">for</span> i, t <span class="keyword">in</span> enumerate(ans):  <span class="comment"># 同时遍历字符和索引</span></span><br><span class="line">    print(<span class="string">' '</span> <span class="keyword">if</span> i &gt; <span class="number">0</span> <span class="keyword">else</span> <span class="string">''</span>, li[int(t)], sep = <span class="string">''</span>, end = <span class="string">''</span>) <span class="comment"># 空格分隔输出</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -412,8 +442,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/11/PAT-B1004-cpp/" rel="next" title="PAT-B1004-cpp">
-                <i class="fa fa-chevron-left"></i> PAT-B1004-cpp
+              <a href="/2018/11/11/PAT-B1003-cpp/" rel="next" title="PAT B1003 我要通过！(C++)">
+                <i class="fa fa-chevron-left"></i> PAT B1003 我要通过！(C++)
               </a>
             
           </div>
@@ -508,7 +538,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">28</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -580,7 +610,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输入格式："><span class="nav-number">2.</span> <span class="nav-text">输入格式：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出格式："><span class="nav-number">3.</span> <span class="nav-text">输出格式：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输入样例："><span class="nav-number">4.</span> <span class="nav-text">输入样例：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出样例："><span class="nav-number">5.</span> <span class="nav-text">输出样例：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#易错点："><span class="nav-number">6.</span> <span class="nav-text">易错点：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#也许陌生的知识点"><span class="nav-number">7.</span> <span class="nav-text">也许陌生的知识点</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输入格式："><span class="nav-number">2.</span> <span class="nav-text">输入格式：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出格式："><span class="nav-number">3.</span> <span class="nav-text">输出格式：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输入样例："><span class="nav-number">4.</span> <span class="nav-text">输入样例：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出样例："><span class="nav-number">5.</span> <span class="nav-text">输出样例：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#易错点："><span class="nav-number">6.</span> <span class="nav-text">易错点：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#也许陌生的知识点"><span class="nav-number">7.</span> <span class="nav-text">也许陌生的知识点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码示例："><span class="nav-number">8.</span> <span class="nav-text">代码示例：</span></a></li></ol></div>
             
 
           </div>
