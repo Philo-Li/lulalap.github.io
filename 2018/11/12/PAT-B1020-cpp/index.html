@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="PAT 甲级目录  |   PAT 乙级目录 题目描述略">
+<meta name="description" content="PAT 甲级目录  |   PAT 乙级目录 题目描述B1020 月饼">
 <meta name="keywords" content="PAT">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PAT B1020 月饼(C++)">
 <meta property="og:url" content="http://lulalap.com/2018/11/12/PAT-B1020-cpp/index.html">
 <meta property="og:site_name" content="未知的世界">
-<meta property="og:description" content="PAT 甲级目录  |   PAT 乙级目录 题目描述略">
+<meta property="og:description" content="PAT 甲级目录  |   PAT 乙级目录 题目描述B1020 月饼">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-16T13:08:11.664Z">
+<meta property="og:updated_time" content="2018-11-22T16:58:08.924Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PAT B1020 月饼(C++)">
-<meta name="twitter:description" content="PAT 甲级目录  |   PAT 乙级目录 题目描述略">
+<meta name="twitter:description" content="PAT 甲级目录  |   PAT 乙级目录 题目描述B1020 月饼">
 
 
 
@@ -294,7 +294,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-12T23:58:53+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-12T23:58:47+08:00">
                 2018-11-12
               </time>
             
@@ -370,13 +370,21 @@
 
       
         <p><a href="http://lulalap.com/2018/11/07/index-of-PAT-Advanced-Level/"> PAT 甲级目录</a>  |  <a href="http://lulalap.com/2018/11/07/index-of-PAT-Basic-Level/"> PAT 乙级目录</a></p>
-<h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>略<br><a id="more"></a></p>
-<!-- #### 输入格式：
+<h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p><a href="https://pintia.cn/problem-sets/994805260223102976/problems/994805301562163200" target="_blank" rel="noopener">B1020 月饼</a><br><a id="more"></a></p>
+<h4 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h4><p>贪心算法，按照单价排序，优先售卖单价最高的月饼，卖完了再换下一种。</p>
+<h4 id="易错点："><a href="#易错点：" class="headerlink" title="易错点："></a>易错点：</h4><ul>
+<li>价格/库存都有可能不是整数</li>
+</ul>
+<h4 id="也许陌生的知识点"><a href="#也许陌生的知识点" class="headerlink" title="也许陌生的知识点"></a>也许陌生的知识点</h4><ul>
+<li><code>sort(S, S + n, cmp);</code><ul>
+<li>排序函数，实现 [first, last) 范围内的排序，可以自定义排序策略 cmp 函数</li>
+<li>不带 cmp 参数的 sort 函数实现从小到大排序</li>
+<li>所需头文件： <strong>algorithm</strong></li>
+</ul>
+</li>
+</ul>
+<h4 id="代码示例："><a href="#代码示例：" class="headerlink" title="代码示例："></a>代码示例：</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1010</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Mooncake</span>&#123;</span></span><br><span class="line">  <span class="keyword">double</span> total_price, storage, ave_price;</span><br><span class="line">&#125;M[maxn];</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(Mooncake a, Mooncake b)</span></span>&#123; <span class="keyword">return</span> a.ave_price &gt; b.ave_price; &#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> N;</span><br><span class="line">  <span class="keyword">double</span> bonus = <span class="number">0.0</span>, need, price[maxn], storage[maxn];</span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">"%d %lf"</span>, &amp;N, &amp;need);</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++) <span class="built_in">scanf</span>(<span class="string">"%lf"</span>, &amp;M[i].storage);</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++) &#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%lf"</span>, &amp;M[i].total_price);</span><br><span class="line">    M[i].ave_price = <span class="number">1.0</span> * M[i].total_price / M[i].storage;</span><br><span class="line">  &#125;</span><br><span class="line">  sort(M, M + N, cmp);</span><br><span class="line">  <span class="keyword">int</span> cnt = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span>(need &gt; <span class="number">0</span> &amp;&amp; cnt &lt; N)&#123;</span><br><span class="line">    <span class="keyword">int</span> t = need &gt; M[cnt].storage ? M[cnt].storage : need;</span><br><span class="line">    bonus += M[cnt++].ave_price * t;</span><br><span class="line">    need -= t;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"%.2f\n"</span>, bonus);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-#### 输出格式：
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">``` --&gt;</span><br><span class="line"></span><br><span class="line">#### 解题思路</span><br><span class="line">贪心算法，按照单价排序，优先售卖单价最高的月饼，卖完了再换下一种。</span><br><span class="line"></span><br><span class="line">#### 易错点：</span><br><span class="line">- 价格/库存都有可能不是整数</span><br><span class="line"></span><br><span class="line">#### 也许陌生的知识点</span><br><span class="line">- `sort(S, S + n, cmp);`</span><br><span class="line">  - 排序函数，实现 [first, last) 范围内的排序，可以自定义排序策略 cmp 函数</span><br><span class="line">  - 不带 cmp 参数的 sort 函数实现从小到大排序</span><br><span class="line">  - 所需头文件： **algorithm**</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#### 代码示例：</span><br><span class="line">``` cpp</span><br><span class="line">#include &lt;cstdio&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">const int maxn = 1010;</span><br><span class="line">struct Mooncake&#123;</span><br><span class="line">  double total_price, storage, ave_price;</span><br><span class="line">&#125;M[maxn];</span><br><span class="line">bool cmp(Mooncake a, Mooncake b)&#123; return a.ave_price &gt; b.ave_price; &#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">  int N;</span><br><span class="line">  double bonus = 0.0, need, price[maxn], storage[maxn];</span><br><span class="line">  scanf(&quot;%d %lf&quot;, &amp;N, &amp;need);</span><br><span class="line">  for(int i = 0; i &lt; N; i++) scanf(&quot;%lf&quot;, &amp;M[i].storage);</span><br><span class="line">  for(int i = 0; i &lt; N; i++) &#123;</span><br><span class="line">    scanf(&quot;%lf&quot;, &amp;M[i].total_price);</span><br><span class="line">    M[i].ave_price = 1.0 * M[i].total_price / M[i].storage;</span><br><span class="line">  &#125;</span><br><span class="line">  sort(M, M + N, cmp);</span><br><span class="line">  int cnt = 0;</span><br><span class="line">  while(need &gt; 0 &amp;&amp; cnt &lt; N)&#123;</span><br><span class="line">    int t = need &gt; M[cnt].storage ? M[cnt].storage : need;</span><br><span class="line">    bonus += M[cnt++].ave_price * t;</span><br><span class="line">    need -= t;</span><br><span class="line">  &#125;</span><br><span class="line">  printf(&quot;%.2f\n&quot;, bonus);</span><br><span class="line">  return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
--->
       
     </div>
     
@@ -406,8 +414,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/12/PAT-B1015-cpp/" rel="next" title="PAT B1015 福尔摩斯的约会(C++)">
-                <i class="fa fa-chevron-left"></i> PAT B1015 福尔摩斯的约会(C++)
+              <a href="/2018/11/12/PAT-B1019-cpp/" rel="next" title="PAT B1019 数字黑洞(C++)">
+                <i class="fa fa-chevron-left"></i> PAT B1019 数字黑洞(C++)
               </a>
             
           </div>
@@ -416,8 +424,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/11/12/PAT-B1017-cpp/" rel="prev" title="PAT B1017 A除以B(C++)">
-                PAT B1017 A除以B(C++) <i class="fa fa-chevron-right"></i>
+              <a href="/2018/11/22/PAT-B1021-cpp/" rel="prev" title="PAT B1021 个位数统计(C++)">
+                PAT B1021 个位数统计(C++) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -502,7 +510,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-count">38</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -574,7 +582,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解题思路"><span class="nav-number">2.</span> <span class="nav-text">解题思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#易错点："><span class="nav-number">3.</span> <span class="nav-text">易错点：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#也许陌生的知识点"><span class="nav-number">4.</span> <span class="nav-text">也许陌生的知识点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码示例："><span class="nav-number">5.</span> <span class="nav-text">代码示例：</span></a></li></ol></div>
             
 
           </div>
