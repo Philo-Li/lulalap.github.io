@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lulalap.com/"/>
-  <updated>2018-11-25T12:16:39.996Z</updated>
+  <updated>2018-11-25T18:20:54.316Z</updated>
   <id>http://lulalap.com/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PAT-B1036-cpp</title>
+    <link href="http://lulalap.com/2018/11/26/PAT-B1036-cpp/"/>
+    <id>http://lulalap.com/2018/11/26/PAT-B1036-cpp/</id>
+    <published>2018-11-25T18:20:54.000Z</published>
+    <updated>2018-11-25T18:20:54.316Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>PAT B1035 插入与归并(C++)</title>
@@ -443,29 +457,6 @@
     
       &lt;a href=&quot;/2018/11/07/index-of-PAT-Advanced-Level/&quot; title=&quot;PAT甲级目录&quot;&gt;PAT甲级目录&lt;/a&gt;  |  &lt;a href=&quot;/2018/11/07/index-of-PAT-Basic-Level/&quot; title=&quot;PAT乙级目录&quot;&gt;PAT乙级目录&lt;/a&gt;
 &lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://pintia.cn/problem-sets/994805260223102976/problems/994805305181847552&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;B1017 A除以B&lt;/a&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="PAT题解" scheme="http://lulalap.com/categories/PAT%E9%A2%98%E8%A7%A3/"/>
-    
-    
-      <category term="PAT" scheme="http://lulalap.com/tags/PAT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PAT B1016 部分A+B(C++)</title>
-    <link href="http://lulalap.com/2018/11/12/PAT-B1016-cpp/"/>
-    <id>http://lulalap.com/2018/11/12/PAT-B1016-cpp/</id>
-    <published>2018-11-12T15:58:43.000Z</published>
-    <updated>2018-11-25T11:44:26.788Z</updated>
-    
-    <content type="html"><![CDATA[<a href="/2018/11/07/index-of-PAT-Advanced-Level/" title="PAT甲级目录">PAT甲级目录</a>  |  <a href="/2018/11/07/index-of-PAT-Basic-Level/" title="PAT乙级目录">PAT乙级目录</a><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p><a href="https://pintia.cn/problem-sets/994805260223102976/problems/994805306310115328" target="_blank" rel="noopener">B1016 部分A+B</a><br><a id="more"></a></p><h2 id="易错点："><a href="#易错点：" class="headerlink" title="易错点："></a>易错点：</h2><ul><li>不要忽略输入数字为 0 的情况</li></ul><h2 id="也许陌生的知识点"><a href="#也许陌生的知识点" class="headerlink" title="也许陌生的知识点"></a>也许陌生的知识点</h2><ul><li><code>y = stoi(x)</code><ul><li>将 string 转换成 int</li></ul></li></ul><h2 id="代码示例："><a href="#代码示例：" class="headerlink" title="代码示例："></a>代码示例：</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getans</span><span class="params">(<span class="built_in">string</span> A, <span class="built_in">string</span> D)</span></span>&#123;</span><br><span class="line">  <span class="built_in">string</span> ans;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; A.length(); i++)&#123;</span><br><span class="line">    <span class="keyword">if</span>(A[i] == D[<span class="number">0</span>]) ans += D[<span class="number">0</span>];</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> (ans == <span class="string">""</span> ? <span class="number">0</span> : stoi(ans));</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">  <span class="built_in">string</span> A, B, Da, Db;</span><br><span class="line">  <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">  <span class="built_in">cin</span> &gt;&gt; A &gt;&gt; Da &gt;&gt; B &gt;&gt; Db;</span><br><span class="line">  ans += getans(A, Da);</span><br><span class="line">  ans += getans(B, Db);</span><br><span class="line">  <span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;a href=&quot;/2018/11/07/index-of-PAT-Advanced-Level/&quot; title=&quot;PAT甲级目录&quot;&gt;PAT甲级目录&lt;/a&gt;  |  &lt;a href=&quot;/2018/11/07/index-of-PAT-Basic-Level/&quot; title=&quot;PAT乙级目录&quot;&gt;PAT乙级目录&lt;/a&gt;
-&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://pintia.cn/problem-sets/994805260223102976/problems/994805306310115328&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;B1016 部分A+B&lt;/a&gt;&lt;br&gt;
     
     </summary>
     
