@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="未知的世界">
 <meta property="og:description" content="PAT甲级目录  |  PAT乙级目录 题目描述B1019 数字黑洞">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-22T17:15:17.421Z">
+<meta property="og:updated_time" content="2018-11-25T11:45:40.725Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PAT B1019 数字黑洞(C++)">
 <meta name="twitter:description" content="PAT甲级目录  |  PAT乙级目录 题目描述B1019 数字黑洞">
@@ -370,13 +370,29 @@
 
       
         <a href="/2018/11/07/index-of-PAT-Advanced-Level/" title="PAT甲级目录">PAT甲级目录</a>  |  <a href="/2018/11/07/index-of-PAT-Basic-Level/" title="PAT乙级目录">PAT乙级目录</a>
-<h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p><a href="https://pintia.cn/problem-sets/994805260223102976/problems/994805302786899968" target="_blank" rel="noopener">B1019 数字黑洞</a><br><a id="more"></a></p>
-<!-- #### 输入格式：
-
-#### 输出格式：
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">``` --&gt;</span><br><span class="line"></span><br><span class="line">#### 解题思路</span><br><span class="line">字符串处理。</span><br><span class="line"></span><br><span class="line">#### 易错点：</span><br><span class="line">- 输入的数字和中间计算得到的数字不一定是四位数，所以要转换一下</span><br><span class="line"></span><br><span class="line">#### 也许陌生的知识点</span><br><span class="line">- `sort(A.begin(), A.end());`</span><br><span class="line">  - 排序函数，实现 [first, last) 范围内的排序</span><br><span class="line">  - 所需头文件： **algorithm**</span><br><span class="line">- `reverse(B.begin(), B.end());`</span><br><span class="line">  - 逆转函数，实现C++容器（数组、队列、字符串）[first, last) 范围内元素逆转</span><br><span class="line">  - 所需头文件： **algorithm**</span><br><span class="line">- `y = stoi(x)`</span><br><span class="line">  - 实现将字符串转换成对应字面的整数</span><br><span class="line">  - 需要的头文件：**string**</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#### 代码示例：</span><br><span class="line">``` cpp</span><br><span class="line">#include &lt;string&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">#include &lt;cstdio&gt;</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()&#123;</span><br><span class="line">  string A, B;</span><br><span class="line">  int S = -1;</span><br><span class="line">  cin &gt;&gt; A;</span><br><span class="line">  while(S != 6174 &amp;&amp; S != 0)&#123;</span><br><span class="line">    while(A.length() &lt; 4) A += &apos;0&apos;;</span><br><span class="line">    sort(A.begin(), A.end());</span><br><span class="line">    B = A;</span><br><span class="line">    reverse(B.begin(), B.end());</span><br><span class="line">    S = stoi(B) - stoi(A);</span><br><span class="line">    printf(&quot;%04d - %04d = %04d\n&quot;, stoi(B), stoi(A), S);</span><br><span class="line">    A = to_string(S);</span><br><span class="line">  &#125;</span><br><span class="line">  return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
--->
+<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p><a href="https://pintia.cn/problem-sets/994805260223102976/problems/994805302786899968" target="_blank" rel="noopener">B1019 数字黑洞</a><br><a id="more"></a></p>
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><p>字符串处理。</p>
+<h2 id="易错点："><a href="#易错点：" class="headerlink" title="易错点："></a>易错点：</h2><ul>
+<li>输入的数字和中间计算得到的数字不一定是四位数，所以要转换一下</li>
+</ul>
+<h2 id="也许陌生的知识点"><a href="#也许陌生的知识点" class="headerlink" title="也许陌生的知识点"></a>也许陌生的知识点</h2><ul>
+<li><code>sort(A.begin(), A.end());</code><ul>
+<li>排序函数，实现 [first, last) 范围内的排序</li>
+<li>所需头文件： <strong>algorithm</strong></li>
+</ul>
+</li>
+<li><code>reverse(B.begin(), B.end());</code><ul>
+<li>逆转函数，实现C++容器（数组、队列、字符串）[first, last) 范围内元素逆转</li>
+<li>所需头文件： <strong>algorithm</strong></li>
+</ul>
+</li>
+<li><code>y = stoi(x)</code><ul>
+<li>实现将字符串转换成对应字面的整数</li>
+<li>需要的头文件：<strong>string</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="代码示例："><a href="#代码示例：" class="headerlink" title="代码示例："></a>代码示例：</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">  <span class="built_in">string</span> A, B;</span><br><span class="line">  <span class="keyword">int</span> S = <span class="number">-1</span>;</span><br><span class="line">  <span class="built_in">cin</span> &gt;&gt; A;</span><br><span class="line">  <span class="keyword">while</span>(S != <span class="number">6174</span> &amp;&amp; S != <span class="number">0</span>)&#123;</span><br><span class="line">    <span class="keyword">while</span>(A.length() &lt; <span class="number">4</span>) A += <span class="string">'0'</span>;</span><br><span class="line">    sort(A.begin(), A.end());</span><br><span class="line">    B = A;</span><br><span class="line">    reverse(B.begin(), B.end());</span><br><span class="line">    S = stoi(B) - stoi(A);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%04d - %04d = %04d\n"</span>, stoi(B), stoi(A), S);</span><br><span class="line">    A = to_string(S);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -574,7 +590,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解题思路"><span class="nav-number">2.</span> <span class="nav-text">解题思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#易错点："><span class="nav-number">3.</span> <span class="nav-text">易错点：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#也许陌生的知识点"><span class="nav-number">4.</span> <span class="nav-text">也许陌生的知识点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码示例："><span class="nav-number">5.</span> <span class="nav-text">代码示例：</span></a></li></ol></div>
             
 
           </div>
