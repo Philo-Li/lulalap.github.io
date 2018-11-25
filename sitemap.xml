@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://lulalap.com/about/index.html</loc>
+    
+    <lastmod>2018-11-25T16:39:39.872Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://lulalap.com/2018/11/22/PAT-B1035-cpp/</loc>
     
     <lastmod>2018-11-25T12:16:39.996Z</lastmod>
@@ -327,13 +334,6 @@
     <loc>http://lulalap.com/2018/11/07/AttributeError-NoneType-object-has-no-attribute-find-all/</loc>
     
     <lastmod>2018-11-07T06:53:46.824Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lulalap.com/about/index.html</loc>
-    
-    <lastmod>2018-11-06T16:08:42.353Z</lastmod>
     
   </url>
   
