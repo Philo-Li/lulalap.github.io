@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://lulalap.com/2018/11/07/index-of-PAT-Basic-Level/</loc>
+    <lastmod>2018-11-25T18:10:26.718Z</lastmod>
+  </url>  <url>
+    <loc>http://lulalap.com/2018/11/07/index-of-PAT-Advanced-Level/</loc>
+    <lastmod>2018-11-25T18:09:35.853Z</lastmod>
+  </url>  <url>
     <loc>http://lulalap.com/2018/11/22/PAT-B1035-cpp/</loc>
     <lastmod>2018-11-25T12:16:39.996Z</lastmod>
   </url>  <url>
@@ -126,12 +132,6 @@
   </url>  <url>
     <loc>http://lulalap.com/2018/01/21/Building-A-Blog-From-Scratch/</loc>
     <lastmod>2018-11-25T08:49:59.009Z</lastmod>
-  </url>  <url>
-    <loc>http://lulalap.com/2018/11/07/index-of-PAT-Basic-Level/</loc>
-    <lastmod>2018-11-25T07:54:40.993Z</lastmod>
-  </url>  <url>
-    <loc>http://lulalap.com/2018/11/07/index-of-PAT-Advanced-Level/</loc>
-    <lastmod>2018-11-22T17:16:03.444Z</lastmod>
   </url>  <url>
     <loc>http://lulalap.com/2018/11/09/python-tutorails-advanced-level/</loc>
     <lastmod>2018-11-10T06:36:41.590Z</lastmod>
