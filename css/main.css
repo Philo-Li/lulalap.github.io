@@ -186,7 +186,7 @@ th {
 body {
   position: relative;
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 2;
   color: #555;
   background: #fff;
@@ -203,7 +203,7 @@ body {
 }
 @media (min-width: 1600px) {
   body {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 h1,
@@ -1237,7 +1237,7 @@ pre .javascript .function {
 .post-body .figure .caption {
   margin: -20px auto 15px;
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
   color: #999;
   font-weight: bold;
   line-height: 1;
@@ -1832,7 +1832,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #facfe2;
+  background: #14f43d;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2805,7 +2805,7 @@ hr {
 }
 @media (max-width: 767px) {
   .posts-expand .post-body {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 .posts-expand .post-body img {
@@ -2831,7 +2831,7 @@ hr {
 }
 .post-button a {
   padding: 0;
-  font-size: 14px;
+  font-size: 16px;
   background: none;
   border: none;
   border-bottom: 2px solid #666;
@@ -2839,12 +2839,12 @@ hr {
 }
 @media (max-width: 767px) {
   .post-button a {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1600px) {
   .post-button a {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 .post-button a:hover {
@@ -2914,14 +2914,120 @@ hr {
     text-align: center;
   }
 }
-.posts-expand .post-eof {
-  display: block;
-  margin: 80px auto 60px;
-  width: 100%;
-  height: 2px;
-  background: #ccc;
-  text-align: center;
+@media screen and (min-width: 1200px) {
+  body {
+    background-image: url("/images/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+  }
+  #footer a {
+    color: #eee;
+  }
 }
-body {
-  background: url("/images/eyeglasses-on-open-book.jpg");
+html.mist .post {
+  margin-top: 60px;
+}
+html.mist .post .post-block {
+  padding: 35px 30px;
+  background: #fff;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
+  border-radius: initial;
+}
+.comments {
+  background-color: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.35);
+  margin: 80px 0px 40px 0px;
+}
+@media (max-width: 1023px) {
+  .container {
+    background-color: rgba(0,0,0,0);
+  }
+  .sidebar {
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  .feed-link {
+    display: none !important;
+  }
+}
+@media (max-width: 767px) {
+  .main {
+    padding-bottom: 120px;
+  }
+  .posts-expand {
+    margin: 0px;
+    padding-top: 70px;
+  }
+  .posts-expand .post-title {
+    font-size: 22px;
+  }
+  .posts-expand .post-meta {
+    font-size: 10px;
+  }
+  .post {
+    margin-bottom: 30px !important;
+    padding: 20px 15px 15px 15px !important;
+  }
+  .post-body h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-left: -15px;
+    padding-left: 11px;
+  }
+  .posts-expand .post-tags {
+    margin-top: 10px;
+  }
+  .post-widgets {
+    margin-top: 10px;
+  }
+  .comments {
+    margin: 40px 0px 40px 0px !important;
+  }
+  .footer {
+    box-shadow: 0px -5px 10px 0px rgba(0,0,0,0.5);
+  }
+}
+.sidebar-active #sidebar-dimmer {
+  opacity: 0;
+}
+.site-nav-toggle {
+  top: 35px;
+  left: 10px;
+}
+.btn-bar {
+  background-color: #fff;
+}
+@media (max-width: 767px) {
+  .menu {
+    text-align: center;
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5);
+  }
+  .site-nav {
+    top: initial;
+    background-color: rgba(255,255,255,0.75);
+    border-top: none;
+    border-bottom: none;
+    position: relative;
+    z-index: 1024;
+  }
+}
+@media (max-width: 767px) {
+  .site-title {
+    font-size: 70px !important;
+    letter-spacing: 0px !important;
+  }
+  .site-subtitle {
+    letter-spacing: 0px !important;
+    padding-bottom: 0px !important;
+  }
+  .site-meta {
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5);
+  }
+  .menu .menu-item {
+    margin: 0px 10px !important;
+  }
 }
