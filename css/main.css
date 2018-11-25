@@ -1832,7 +1832,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #8f4ee4;
+  background: #facfe2;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2921,4 +2921,7 @@ hr {
   height: 2px;
   background: #ccc;
   text-align: center;
+}
+body {
+  background: url("/images/eyeglasses-on-open-book.jpg");
 }
