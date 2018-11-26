@@ -1832,7 +1832,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #79a866;
+  background: #daffff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2922,10 +2922,10 @@ body {
   background-size: contain;
   height: 100%;
 }
-html.mist .post {
+.post {
   margin-top: 60px;
 }
-html.mist .post .post-block {
+.post .post-block {
   padding: 35px 30px;
   background: rgba(255,255,255,0.85);
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
@@ -2945,8 +2945,6 @@ html.mist .post .post-block {
 }
 .category-all-page {
   margin: 0px 50px 40px 50px;
-  background-color: rgba(255,255,255,0.85);
-  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
   padding: 15px 36px 36px 36px;
 }
 @media (max-width: 767px) {
@@ -2959,11 +2957,13 @@ html.mist .post .post-block {
 }
 .post-block.page {
   margin-top: 40px;
+  background-color: rgba(255,255,255,0.85);
+  padding: 15px 36px 36px 36px;
 }
 .about-page {
   margin: -80px 0px 60px 0px;
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
-  background-color: #fff;
+  background-color: rgba(255,255,255,0.85);
   padding: 106px 36px 36px 36px;
 }
 @media (max-width: 767px) {
@@ -2971,17 +2971,6 @@ html.mist .post .post-block {
     margin: -73px 0px 50px 0px;
     padding: 96px 15px 20px 15px;
   }
-}
-h2.about-title {
-  border-left: none !important;
-  margin-left: 0px !important;
-  padding-left: 0px !important;
-  text-align: center;
-  background-image: linear-gradient(90deg, #a166ab 0%, #a166ab 40%, #ef4e7b 45%, #f37055 50%, #ef4e7b 55%, #a166ab 60%, #a166ab 100%);
-  background-size: cover;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  user-select: none;
 }
 .posts-collapse {
   margin: 50px 0px;
@@ -3027,8 +3016,6 @@ h2.about-title {
 }
 .tag-cloud {
   margin: 0px 50px 40px 50px;
-  background-color: #fff;
-  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
   padding: 16px 36px 36px 36px;
 }
 .tag-cloud-title {
@@ -3038,77 +3025,5 @@ h2.about-title {
   .tag-cloud {
     margin: -73px 15px 50px 15px;
     padding: 86px 5px 36px 5px;
-  }
-}
-@media (max-width: 1023px) {
-  .container {
-    background-color: rgba(0,0,0,0);
-  }
-  .sidebar {
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-  }
-  .feed-link {
-    display: none !important;
-  }
-}
-@media (max-width: 767px) {
-  .main {
-    padding-bottom: 120px;
-  }
-  .posts-expand {
-    margin: 0px;
-    padding-top: 70px;
-  }
-  .posts-expand .post-title {
-    font-size: 22px;
-  }
-  .posts-expand .post-meta {
-    font-size: 10px;
-  }
-  .post {
-    margin-bottom: 30px !important;
-    padding: 20px 15px 15px 15px !important;
-  }
-  .post-body h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin-left: -15px;
-    padding-left: 11px;
-  }
-  .posts-expand .post-tags {
-    margin-top: 10px;
-  }
-  .post-widgets {
-    margin-top: 10px;
-  }
-  .comments {
-    margin: 40px 15px 40px 15px !important;
-  }
-  .footer {
-    box-shadow: 0px -5px 10px 0px rgba(0,0,0,0.5);
-  }
-}
-.sidebar-active #sidebar-dimmer {
-  opacity: 0;
-}
-.site-nav-toggle {
-  top: 35px;
-  left: 10px;
-}
-@media (max-width: 767px) {
-  .menu {
-    text-align: center;
-    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5);
-  }
-  .site-nav {
-    top: initial;
-    border-top: none;
-    border-bottom: none;
-    position: relative;
-    z-index: 1024;
   }
 }
