@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="PAT甲级目录  |  PAT乙级目录 题目描述B1017 A除以B">
+<meta name="description" content="PAT甲级目录  |  PAT乙级目录 题目描述">
 <meta name="keywords" content="PAT">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PAT B1017 A除以B(C++)">
 <meta property="og:url" content="http://lulalap.com/2018/11/12/PAT-B1017-cpp/index.html">
 <meta property="og:site_name" content="未知的世界">
-<meta property="og:description" content="PAT甲级目录  |  PAT乙级目录 题目描述B1017 A除以B">
+<meta property="og:description" content="PAT甲级目录  |  PAT乙级目录 题目描述">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-25T11:45:09.935Z">
+<meta property="og:updated_time" content="2018-11-25T18:48:52.220Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PAT B1017 A除以B(C++)">
-<meta name="twitter:description" content="PAT甲级目录  |  PAT乙级目录 题目描述B1017 A除以B">
+<meta name="twitter:description" content="PAT甲级目录  |  PAT乙级目录 题目描述">
 
 
 
@@ -370,7 +370,8 @@
 
       
         <a href="/2018/11/07/index-of-PAT-Advanced-Level/" title="PAT甲级目录">PAT甲级目录</a>  |  <a href="/2018/11/07/index-of-PAT-Basic-Level/" title="PAT乙级目录">PAT乙级目录</a>
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p><a href="https://pintia.cn/problem-sets/994805260223102976/problems/994805305181847552" target="_blank" rel="noopener">B1017 A除以B</a><br><a id="more"></a></p>
+<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><a id="more"></a>
+<p><a href="https://pintia.cn/problem-sets/994805260223102976/problems/994805305181847552" target="_blank" rel="noopener">B1017 A除以B</a></p>
 <h2 id="易错点："><a href="#易错点：" class="headerlink" title="易错点："></a>易错点：</h2><ul>
 <li>输出的时候要去掉前导零</li>
 <li>被除数为 0 也要正确输出</li>
@@ -386,6 +387,7 @@
 </li>
 </ul>
 <h2 id="代码示例："><a href="#代码示例：" class="headerlink" title="代码示例："></a>代码示例：</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">  <span class="built_in">string</span> A, Q;</span><br><span class="line">  <span class="keyword">int</span> B, R = <span class="number">0</span>;</span><br><span class="line">  <span class="built_in">cin</span> &gt;&gt; A &gt;&gt; B;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; A.length(); i++)&#123;</span><br><span class="line">    R = R * <span class="number">10</span> + (<span class="keyword">int</span>)(A[i] - <span class="string">'0'</span>);</span><br><span class="line">    Q = Q + to_string(R / B);</span><br><span class="line">    R = R % B;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">while</span>(Q[<span class="number">0</span>] == <span class="string">'0'</span> &amp;&amp; Q.length() &gt; <span class="number">1</span>) Q.erase(Q.begin());</span><br><span class="line">  <span class="built_in">cout</span> &lt;&lt; Q &lt;&lt; <span class="string">' '</span> &lt;&lt; to_string(R);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -511,7 +513,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">49</span>
+                  <span class="site-state-item-count">58</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

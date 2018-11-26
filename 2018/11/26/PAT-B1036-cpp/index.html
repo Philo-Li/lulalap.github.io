@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="PAT," />
 
 
 
@@ -81,17 +81,18 @@
 
 
 
-<meta name="description" content="Do Something Cool!">
+<meta name="description" content="PAT甲级目录  |  PAT乙级目录 题目描述">
+<meta name="keywords" content="PAT">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PAT-B1036-cpp">
+<meta property="og:title" content="PAT B1036 跟奥巴马一起编程(C++)">
 <meta property="og:url" content="http://lulalap.com/2018/11/26/PAT-B1036-cpp/index.html">
 <meta property="og:site_name" content="未知的世界">
-<meta property="og:description" content="Do Something Cool!">
+<meta property="og:description" content="PAT甲级目录  |  PAT乙级目录 题目描述">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-25T18:20:54.316Z">
+<meta property="og:updated_time" content="2018-11-25T19:33:29.199Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PAT-B1036-cpp">
-<meta name="twitter:description" content="Do Something Cool!">
+<meta name="twitter:title" content="PAT B1036 跟奥巴马一起编程(C++)">
+<meta name="twitter:description" content="PAT甲级目录  |  PAT乙级目录 题目描述">
 
 
 
@@ -127,7 +128,7 @@
 
 
 
-  <title>PAT-B1036-cpp | 未知的世界</title>
+  <title>PAT B1036 跟奥巴马一起编程(C++) | 未知的世界</title>
   
 
 
@@ -281,7 +282,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">PAT-B1036-cpp</h1>
+          <h1 class="post-title" itemprop="name headline">PAT B1036 跟奥巴马一起编程(C++)</h1>
         
 
         <div class="post-meta">
@@ -303,6 +304,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/PAT题解/" itemprop="url" rel="index">
+                    <span itemprop="name">PAT题解</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -346,7 +369,18 @@
       
 
       
-        
+        <a href="/2018/11/07/index-of-PAT-Advanced-Level/" title="PAT甲级目录">PAT甲级目录</a>  |  <a href="/2018/11/07/index-of-PAT-Basic-Level/" title="PAT乙级目录">PAT乙级目录</a>
+<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><a id="more"></a>
+<p><a href="https://pintia.cn/problem-sets/994805260223102976/problems/994805285812551680" target="_blank" rel="noopener">B1036 跟奥巴马一起编程</a></p>
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><p>简单的图形打印。</p>
+<h2 id="易错点"><a href="#易错点" class="headerlink" title="易错点"></a>易错点</h2><ul>
+<li>注意行数为列数的 50% 的四舍五入</li>
+</ul>
+<h2 id="也许陌生的知识点"><a href="#也许陌生的知识点" class="headerlink" title="也许陌生的知识点"></a>也许陌生的知识点</h2><ul>
+<li>无</li>
+</ul>
+<h2 id="代码示例："><a href="#代码示例：" class="headerlink" title="代码示例："></a>代码示例：</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> N;</span><br><span class="line">  <span class="keyword">char</span> c;</span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">"%d %c"</span>, &amp;N, &amp;c);</span><br><span class="line">  <span class="keyword">int</span> r = (N + <span class="number">1</span>) / <span class="number">2</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; r; i++)&#123;</span><br><span class="line">    <span class="keyword">if</span>(i == <span class="number">0</span> || i == r - <span class="number">1</span>)&#123;</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; N; j++) <span class="built_in">printf</span>(<span class="string">"%c"</span>, c);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; N; j++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(j == <span class="number">0</span> || j == N - <span class="number">1</span>) <span class="built_in">printf</span>(<span class="string">"%c"</span>, c);</span><br><span class="line">        <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">" "</span>);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -360,6 +394,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/PAT/" rel="tag"><i class="fa fa-tag"></i> PAT</a>
+          
+        </div>
       
 
       
@@ -379,6 +419,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/26/PAT-B1037-cpp/" rel="prev" title="PAT B1037 在霍格沃茨找零钱(C++)">
+                PAT B1037 在霍格沃茨找零钱(C++) <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -433,8 +477,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -453,7 +506,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">49</span>
+                  <span class="site-state-item-count">58</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -515,6 +568,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解题思路"><span class="nav-number">2.</span> <span class="nav-text">解题思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#易错点"><span class="nav-number">3.</span> <span class="nav-text">易错点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#也许陌生的知识点"><span class="nav-number">4.</span> <span class="nav-text">也许陌生的知识点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码示例："><span class="nav-number">5.</span> <span class="nav-text">代码示例：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
