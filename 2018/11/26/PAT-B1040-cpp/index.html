@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="未知的世界">
 <meta property="og:description" content="PAT甲级目录  |  PAT乙级目录 题目描述">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-25T20:43:05.062Z">
+<meta property="og:updated_time" content="2018-11-28T14:36:41.544Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PAT B1040 有几个PAT(C++)">
 <meta name="twitter:description" content="PAT甲级目录  |  PAT乙级目录 题目描述">
@@ -374,12 +374,6 @@
 <p><a href="https://pintia.cn/problem-sets/994805260223102976/problems/994805282389999616" target="_blank" rel="noopener">B1040 有几个PAT</a></p>
 <h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><p>逻辑题。先遍历字符串，对每一个 ‘A’ ，有效的 ‘PAT’ 个数 $m = left_P * right_T$，即为 ‘A’ 左侧的 ‘P’ 字符数与其右侧的 ‘T’ 字符数的乘积。</p>
 <p>每个 ‘A’ 字符左右的 ‘P’ 和 ‘T’ 数量可以通过他们的总数间接求得。一边遍历 ‘A’ 一边可以得到 left_P， right_T = 总的 ‘T’ - left_T。</p>
-<h2 id="易错点"><a href="#易错点" class="headerlink" title="易错点"></a>易错点</h2><ul>
-<li>无</li>
-</ul>
-<h2 id="也许陌生的知识点"><a href="#也许陌生的知识点" class="headerlink" title="也许陌生的知识点"></a>也许陌生的知识点</h2><ul>
-<li>无</li>
-</ul>
 <h2 id="代码示例："><a href="#代码示例：" class="headerlink" title="代码示例："></a>代码示例：</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> left_P = <span class="number">0</span>, right_T = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">long</span> <span class="keyword">long</span> ans = <span class="number">0</span>;</span><br><span class="line">  <span class="built_in">string</span> S;</span><br><span class="line">  getline(<span class="built_in">cin</span>, S);</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; S.length(); i++) &#123;</span><br><span class="line">    <span class="keyword">if</span>(S[i] == <span class="string">'T'</span>) right_T++;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; S.length(); i++)&#123;</span><br><span class="line">    <span class="keyword">if</span>(S[i] == <span class="string">'P'</span>) left_P++;</span><br><span class="line">    <span class="keyword">if</span>(S[i] == <span class="string">'T'</span>) right_T--;</span><br><span class="line">    <span class="keyword">if</span>(S[i] == <span class="string">'A'</span>) ans = (ans + left_P * right_T) % <span class="number">1000000007</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
@@ -507,7 +501,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">80</span>
+                  <span class="site-state-item-count">116</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -579,7 +573,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解题思路"><span class="nav-number">2.</span> <span class="nav-text">解题思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#易错点"><span class="nav-number">3.</span> <span class="nav-text">易错点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#也许陌生的知识点"><span class="nav-number">4.</span> <span class="nav-text">也许陌生的知识点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码示例："><span class="nav-number">5.</span> <span class="nav-text">代码示例：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解题思路"><span class="nav-number">2.</span> <span class="nav-text">解题思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码示例："><span class="nav-number">3.</span> <span class="nav-text">代码示例：</span></a></li></ol></div>
             
 
           </div>
