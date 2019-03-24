@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="PAT," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -81,18 +81,17 @@
 
 
 
-<meta name="description" content="PAT甲级目录  |  PAT乙级目录 题目描述">
-<meta name="keywords" content="PAT">
+<meta name="description" content="闲聊帖恭喜你发现了本站的隐藏地点，在这里可以随便打滚玩耍留言">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PAT B1055 集体照(C++)">
-<meta property="og:url" content="http://lulalap.com/2018/11/27/PAT-B1055-cpp/index.html">
+<meta property="og:title" content="Chat-Only">
+<meta property="og:url" content="http://lulalap.com/2018/11/11/Chat-Only/index.html">
 <meta property="og:site_name" content="未知的世界">
-<meta property="og:description" content="PAT甲级目录  |  PAT乙级目录 题目描述">
+<meta property="og:description" content="闲聊帖恭喜你发现了本站的隐藏地点，在这里可以随便打滚玩耍留言">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-03T09:45:53.624Z">
+<meta property="og:updated_time" content="2019-03-24T05:59:00.643Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PAT B1055 集体照(C++)">
-<meta name="twitter:description" content="PAT甲级目录  |  PAT乙级目录 题目描述">
+<meta name="twitter:title" content="Chat-Only">
+<meta name="twitter:description" content="闲聊帖恭喜你发现了本站的隐藏地点，在这里可以随便打滚玩耍留言">
 
 
 
@@ -122,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://lulalap.com/2018/11/27/PAT-B1055-cpp/"/>
+  <link rel="canonical" href="http://lulalap.com/2018/11/11/Chat-Only/"/>
 
 
 
 
 
-  <title>PAT B1055 集体照(C++) | 未知的世界</title>
+  <title>Chat-Only | 未知的世界</title>
   
 
 
@@ -265,7 +264,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lulalap.com/2018/11/27/PAT-B1055-cpp/">
+    <link itemprop="mainEntityOfPage" href="http://lulalap.com/2018/11/11/Chat-Only/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Philo">
@@ -282,7 +281,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">PAT B1055 集体照(C++)</h1>
+          <h1 class="post-title" itemprop="name headline">Chat-Only</h1>
         
 
         <div class="post-meta">
@@ -294,8 +293,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-27T14:48:54+08:00">
-                2018-11-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-11T13:56:43+08:00">
+                2018-11-11
               </time>
             
 
@@ -335,8 +334,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/11/27/PAT-B1055-cpp/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/11/27/PAT-B1055-cpp/" itemprop="commentCount"></span>
+                <a href="/2018/11/11/Chat-Only/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/11/11/Chat-Only/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -369,31 +368,7 @@
       
 
       
-        <a href="/2018/11/07/index-of-PAT-Advanced-Level/" title="PAT甲级目录">PAT甲级目录</a>  |  <a href="/2018/11/07/index-of-PAT-Basic-Level/" title="PAT乙级目录">PAT乙级目录</a>
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><a id="more"></a>
-<p><a href="https://pintia.cn/problem-sets/994805260223102976/problems/994805272021680128" target="_blank" rel="noopener">B1055 集体照</a></p>
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><p>对所有人逆序排序，先从最后一排开始排，每排完一排就输出。对于每一排，计算该排人数，并设置对应的左右指针，一边排一边移动指针，当指针达到边界，则该排完成，按指定格式输出结果。</p>
-<h2 id="易错点"><a href="#易错点" class="headerlink" title="易错点"></a>易错点</h2><ul>
-<li><code>if(i == 0) m = n - (n / k) * (k - 1);</code><ul>
-<li>最后一排人数</li>
-</ul>
-</li>
-<li>对于拍照的人（输出格式）来说，从中间开始，先排右边的人，再排左边的人。</li>
-<li><code>r = m / 2; l = r - 1;</code><ul>
-<li>设置好左右指针位置，免去考虑第一个人是否重复赋值</li>
-</ul>
-</li>
-<li>一共 k 排，因此遍历范围正好为 [0, k)</li>
-</ul>
-<h2 id="也许陌生的知识点"><a href="#也许陌生的知识点" class="headerlink" title="也许陌生的知识点"></a>也许陌生的知识点</h2><ul>
-<li><code>sort(S, S + n, cmp);</code><ul>
-<li>排序函数，实现 [first, last) 范围内的排序，可以自定义排序策略 cmp 函数</li>
-<li>不带 cmp 参数的 sort 函数实现从小到大排序</li>
-<li>所需头文件： <strong>algorithm</strong></li>
-</ul>
-</li>
-</ul>
-<h2 id="代码示例："><a href="#代码示例：" class="headerlink" title="代码示例："></a>代码示例：</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Stu</span>&#123;</span></span><br><span class="line">  <span class="keyword">char</span> name[<span class="number">20</span>];</span><br><span class="line">  <span class="keyword">int</span> h;</span><br><span class="line">&#125;S[<span class="number">10010</span>];</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(Stu a, Stu b)</span></span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(a.h != b.h) <span class="keyword">return</span> a.h &gt; b.h;</span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">return</span> <span class="built_in">strcmp</span>(a.name, b.name) &lt; <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> n, k, cnt = <span class="number">0</span>;</span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;n, &amp;k);</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) <span class="built_in">scanf</span>(<span class="string">"%s %d"</span>, &amp;S[i].name, &amp;S[i].h);</span><br><span class="line">  sort(S, S + n, cmp);</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>, m, l, r; i &lt; k; i++)&#123;<span class="comment">// 总共 k 排</span></span><br><span class="line">    <span class="keyword">int</span> ans[<span class="number">10010</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">    <span class="keyword">if</span>(i == <span class="number">0</span>) m = n - (n / k) * (k - <span class="number">1</span>); <span class="comment">//计算本排人数</span></span><br><span class="line">    <span class="keyword">else</span> m = n / k;</span><br><span class="line">    r = m / <span class="number">2</span>; <span class="comment">// 设置左右指针</span></span><br><span class="line">    l = r - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(r &lt; m || l &gt;= <span class="number">0</span>)&#123; <span class="comment">// 一边移动指针一边记录编号</span></span><br><span class="line">      <span class="keyword">if</span>(r &lt; m) ans[r++] = cnt++;</span><br><span class="line">      <span class="keyword">if</span>(l &gt;= <span class="number">0</span>) ans[l--] = cnt++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; m; j++)&#123;</span><br><span class="line">      <span class="keyword">if</span>(j != <span class="number">0</span>) <span class="built_in">printf</span>(<span class="string">" "</span>);</span><br><span class="line">      <span class="built_in">printf</span>(<span class="string">"%s"</span>, S[ans[j]].name);</span><br><span class="line">      <span class="keyword">if</span>(j == m - <span class="number">1</span>) <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h3 id="闲聊帖"><a href="#闲聊帖" class="headerlink" title="闲聊帖"></a>闲聊帖</h3><p>恭喜你发现了本站的隐藏地点，在这里可以随便打滚玩耍留言</p>
 
       
     </div>
@@ -409,12 +384,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/PAT/" rel="tag"><i class="fa fa-tag"></i> PAT</a>
-          
-        </div>
-      
 
       
       
@@ -424,8 +393,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/27/PAT-B1054-cpp/" rel="next" title="PAT B1054 求平均值(C++)">
-                <i class="fa fa-chevron-left"></i> PAT B1054 求平均值(C++)
+              <a href="/2018/11/11/PAT-B1002-py/" rel="next" title="PAT B1002 写出这个数(Python)">
+                <i class="fa fa-chevron-left"></i> PAT B1002 写出这个数(Python)
               </a>
             
           </div>
@@ -434,8 +403,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/11/27/PAT-B1056-cpp/" rel="prev" title="PAT B1056 组合数的和(C++)">
-                PAT B1056 组合数的和(C++) <i class="fa fa-chevron-right"></i>
+              <a href="/2018/11/11/PAT-B1086-cpp/" rel="prev" title="PAT B1086 就不告诉你(C++)">
+                PAT B1086 就不告诉你(C++) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -592,7 +561,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解题思路"><span class="nav-number">2.</span> <span class="nav-text">解题思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#易错点"><span class="nav-number">3.</span> <span class="nav-text">易错点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#也许陌生的知识点"><span class="nav-number">4.</span> <span class="nav-text">也许陌生的知识点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码示例："><span class="nav-number">5.</span> <span class="nav-text">代码示例：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#闲聊帖"><span class="nav-number">1.</span> <span class="nav-text">闲聊帖</span></a></li></ol></div>
             
 
           </div>
