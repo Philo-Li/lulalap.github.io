@@ -2849,6 +2849,29 @@
     </entry>
     
     <entry>
+      <title>AttributeError:&#39;NoneType&#39; object has no attribute &#39;find_all&#39;</title>
+      <link href="/2018/11/08/attributeError-noneType-object-has-no-attribute-find-all/"/>
+      <url>/2018/11/08/attributeError-noneType-object-has-no-attribute-find-all/</url>
+      
+        <content type="html"><![CDATA[<h3 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h3><p>当像这样使用 BeautifulSoup 时，会遇到报错信息：<strong> AttributeError: ‘NoneType’ object has no attribute ‘find_all’ </strong><br><a id="more"></a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">soup = BeautifulSoup(html,features=<span class="string">'lxml'</span>)</span><br><span class="line">content = soup.find(<span class="string">'article'</span>, &#123;<span class="string">"class"</span>:<span class="string">'post post-type-normal'</span>&#125;)</span><br><span class="line">d_body = content.find_all(<span class="string">'li'</span>)</span><br></pre></td></tr></table></figure></p><h3 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h3><p>查了很多博客，但是都没说到点上，最后找到了。其实是 soup.find() 里的参数不对，没有匹配到任何信息，导致上一步得到的 content 是空的，因此后面会报错。调整了一下参数，完美运行。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 日常折腾 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 爬虫 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>数据科学中 Python 的常用语法(基础)</title>
       <link href="/2018/11/07/python-tutorails-basic-level/"/>
       <url>/2018/11/07/python-tutorails-basic-level/</url>
@@ -3004,6 +3027,29 @@
         <tags>
             
             <tag> 闲聊 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Atom下如何让光标自动移动到配对符号外</title>
+      <link href="/2018/03/15/automatically-move-the-cursor-outside-the-brackets-in-Atom/"/>
+      <url>/2018/03/15/automatically-move-the-cursor-outside-the-brackets-in-Atom/</url>
+      
+        <content type="html"><![CDATA[<p>Atom作为一款简洁优美的编辑器深受广大用户的喜爱，丰富的插件极大地提高了它的易用性。日常敲代码的人都知道，编辑器提供的符号自动配对（即括号成对输出：“”）虽然降低了出错率，但是最令人头疼的还是在输入完成后，需要再敲一个方向键才能将光标移动到括号外，而单纯移动手指是够不着方向键→的。</p><p>那么如何在Atom环境下解决光标自动移动问题？</p><a id="more"></a><h3 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h3><ul><li>Windows 10 + 64位</li><li>Atom</li></ul><h3 id="修改init-script文件"><a href="#修改init-script文件" class="headerlink" title="修改init script文件"></a>修改init script文件</h3><ul><li><p>在 Atom 编辑器中，用 Ctrl + Shift + P 呼出 Command Palette 窗口</p></li><li><p>在窗口搜索框输入 init script , 点击 Application: Open Your Init Script</p></li><li><p>在打开的文件里粘贴以下代码：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># move cursor across the ending symbols...</span></span><br><span class="line">EndingSymbolRegex = /\s*[)&#125;&gt;\]/<span class="string">'"`;:=-]/</span></span><br><span class="line"><span class="string">atom.commands.add '</span>atom-text-editor<span class="string">', '</span>custom:jump-over-symbol<span class="string">': (event) -&gt;</span></span><br><span class="line"><span class="string">  editor = atom.workspace.getActiveTextEditor()</span></span><br><span class="line"><span class="string">  cursorMoved = false</span></span><br><span class="line"><span class="string">  for cursor in editor.getCursors()</span></span><br><span class="line"><span class="string">    range = cursor.getCurrentWordBufferRange(wordRegex: EndingSymbolRegex)</span></span><br><span class="line"><span class="string">    unless range.isEmpty()</span></span><br><span class="line"><span class="string">      cursor.setBufferPosition(range.end)</span></span><br><span class="line"><span class="string">      cursorMoved = true</span></span><br><span class="line"><span class="string">  event.abortKeyBinding() unless cursorMoved</span></span><br></pre></td></tr></table></figure></li></ul><h3 id="修改快捷键键位"><a href="#修改快捷键键位" class="headerlink" title="修改快捷键键位"></a>修改快捷键键位</h3><ul><li>在 Atom 编辑器中，用 Ctrl + Shift + P 呼出 Command Palette 窗口</li><li>在窗口搜索框输入 keymap , 点击 Application: Open Your keymap</li><li><p>在打开的文件底部增加如下代码：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"atom-text-editor:not([mini])"</span>:</span><br><span class="line">  <span class="string">"tab"</span>: <span class="string">"custom:jump-over-symbol"</span></span><br></pre></td></tr></table></figure></li><li><p>“tab” 可更换成自己习惯的其他快捷键，如”shift”, “enter”, 或者”shift-enter”</p></li></ul><h3 id="更新设置"><a href="#更新设置" class="headerlink" title="更新设置"></a>更新设置</h3><ul><li>在 Atom 编辑器中，用 Ctrl + Shift + P 呼出 Command Palette 窗口</li><li>输入 reload, 选择 Window: Reload</li></ul><p>接下来就可以愉快地玩耍啦！</p><h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><p><a href="https://jetorz.github.io/2017-02-07-Skill-Atom-auto-pair.html" target="_blank" rel="noopener">技巧卡：怎样让 Atom 将光标自动移动到配对符号外</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 日常折腾 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Atom </tag>
             
         </tags>
       
