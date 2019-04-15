@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://lulalap.com/2018/01/22/building-a-blog-from-scratch/</loc>
-    <lastmod>2019-04-15T12:55:21.690Z</lastmod>
+    <loc>http://lulalap.com/2018/01/25/building-a-blog-from-scratch/</loc>
+    <lastmod>2019-04-15T13:14:35.209Z</lastmod>
   </url>  <url>
     <loc>http://lulalap.com/2018/11/11/chatonly/</loc>
     <lastmod>2019-03-24T05:59:00.643Z</lastmod>
@@ -396,11 +396,5 @@
   </url>  <url>
     <loc>http://lulalap.com/2018/11/07/python-tutorails-basic-level/</loc>
     <lastmod>2018-11-10T06:35:57.956Z</lastmod>
-  </url>  <url>
-    <loc>http://lulalap.com/2018/11/07/attributeError-noneType-object-has-no-attribute-find-all/</loc>
-    <lastmod>2018-11-07T06:53:46.824Z</lastmod>
-  </url>  <url>
-    <loc>http://lulalap.com/2018/03/12/automatically-move-the-cursor-outside-the-brackets-in-Atom/</loc>
-    <lastmod>2018-11-04T12:04:52.023Z</lastmod>
   </url>
 </urlset>
