@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lulalap.com/"/>
-  <updated>2019-09-14T11:16:33.674Z</updated>
+  <updated>2019-09-18T05:37:13.505Z</updated>
   <id>http://lulalap.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>成功将博客评论数据迁移至LeanCloud国际版</title>
+    <link href="http://lulalap.com/2019/09/18/move-comment-data-to-leancloud-internatinal-edition/"/>
+    <id>http://lulalap.com/2019/09/18/move-comment-data-to-leancloud-internatinal-edition/</id>
+    <published>2019-09-18T05:18:18.000Z</published>
+    <updated>2019-09-18T05:37:13.505Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近 LeanCloud 要求所有用户实名制了，但是作为一名自由的互联网人，怎么可以屈服呢？</p><p>LeanCloud 国际版可以提供原来所有的功能，并且不需要实名制，所以这里将博客评论数据迁移至国际版。</p><h2 id="第一步：数据导出"><a href="#第一步：数据导出" class="headerlink" title="第一步：数据导出"></a>第一步：数据导出</h2><p>进入 LeanCloud 国内版应用，找到设置，选择数据导出，限定需要导出的日期范围，点击导出。过一会儿数据就会发送到你的邮箱。</p><p>注意：每天12：00之前才能进行数据导出操作，错过了就等下一天吧:)。</p><h2 id="第二步：数据导入"><a href="#第二步：数据导入" class="headerlink" title="第二步：数据导入"></a>第二步：数据导入</h2><p>注册 LeanCloud 国际版账号，新建一个应用，解压刚刚下好的文件，导入包含了有效数据的几个 json 格式的文件（大部分是空数据）。</p><h2 id="第三步：修改博客-appid"><a href="#第三步：修改博客-appid" class="headerlink" title="第三步：修改博客 appid"></a>第三步：修改博客 appid</h2><p>我用的博客系统是 Hexo，找到对应主题的文件夹，修改 _config.yml，将旧 appid 和 appkey 替换成新应用的。</p><h2 id="第四步：重新部署并发布"><a href="#第四步：重新部署并发布" class="headerlink" title="第四步：重新部署并发布"></a>第四步：重新部署并发布</h2><p>老套路：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></p><p>恭喜你，评论系统已经迁移成功了！可以发布新评论测试一下效果。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;最近 LeanCloud 要求所有用户实名制了，但是作为一名自由的互联网人，怎么可以屈服呢？&lt;/p&gt;
+&lt;p&gt;LeanCloud 国际版可以提供原来所有的功能，并且不需要实名制，所以这里将博客评论数据迁移至国际版。&lt;/p&gt;
+&lt;h2 id=&quot;第一步：数据导出&quot;&gt;&lt;a href=
+      
+    
+    </summary>
+    
+      <category term="日常折腾" scheme="http://lulalap.com/categories/%E6%97%A5%E5%B8%B8%E6%8A%98%E8%85%BE/"/>
+    
+    
+      <category term="博客搭建" scheme="http://lulalap.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>拖延了五年我终于读完了《拖延心理学》|MiniLib</title>
@@ -436,29 +463,6 @@
     <updated>2018-11-29T08:40:07.043Z</updated>
     
     <content type="html"><![CDATA[<a href="/2018/11/07/index-of-PAT-Advanced-Level/" title="PAT甲级目录">PAT甲级目录</a>  |  <a href="/2018/11/07/index-of-PAT-Basic-Level/" title="PAT乙级目录">PAT乙级目录</a><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><a id="more"></a><p><a href="https://pintia.cn/problem-sets/994805260223102976/problems/994805260990660608" target="_blank" rel="noopener">B1082 射击比赛</a></p><h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><p>在输入数据的同时更新当前“冠军/菜鸟”的射击距离和id，遍历结束答案就出来了。可以直接使用距离的平方作为长度，省去类型转换的麻烦。</p><h2 id="易错点"><a href="#易错点" class="headerlink" title="易错点"></a>易错点</h2><ul><li>输出的 id 为四位数字</li></ul><h2 id="代码示例："><a href="#代码示例：" class="headerlink" title="代码示例："></a>代码示例：</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> N, id_win, len_win = <span class="number">10000</span>, id_lose, len_lose = <span class="number">0</span>;</span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;N);</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++)&#123;</span><br><span class="line">    <span class="keyword">int</span> id, x, y, len;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d %d %d"</span>, &amp;id, &amp;x, &amp;y);</span><br><span class="line">    len = x * x + y * y;</span><br><span class="line">    <span class="keyword">if</span>(len &gt; len_lose)&#123;</span><br><span class="line">      len_lose = len;</span><br><span class="line">      id_lose = id;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(len &lt; len_win)&#123;</span><br><span class="line">      len_win = len;</span><br><span class="line">      id_win = id;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"%04d %04d\n"</span>, id_win, id_lose);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;a href=&quot;/2018/11/07/index-of-PAT-Advanced-Level/&quot; title=&quot;PAT甲级目录&quot;&gt;PAT甲级目录&lt;/a&gt;  |  &lt;a href=&quot;/2018/11/07/index-of-PAT-Basic-Level/&quot; title=&quot;PAT乙级目录&quot;&gt;PAT乙级目录&lt;/a&gt;
-&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h2&gt;
-    
-    </summary>
-    
-      <category term="PAT题解" scheme="http://lulalap.com/categories/PAT%E9%A2%98%E8%A7%A3/"/>
-    
-    
-      <category term="PAT" scheme="http://lulalap.com/tags/PAT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PAT B1081 检查密码(C++)</title>
-    <link href="http://lulalap.com/2018/11/29/PAT-B1081-cpp/"/>
-    <id>http://lulalap.com/2018/11/29/PAT-B1081-cpp/</id>
-    <published>2018-11-29T08:07:54.000Z</published>
-    <updated>2018-11-29T08:23:04.140Z</updated>
-    
-    <content type="html"><![CDATA[<a href="/2018/11/07/index-of-PAT-Advanced-Level/" title="PAT甲级目录">PAT甲级目录</a>  |  <a href="/2018/11/07/index-of-PAT-Basic-Level/" title="PAT乙级目录">PAT乙级目录</a><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><a id="more"></a><p><a href="https://pintia.cn/problem-sets/994805260223102976/problems/994805261217153024" target="_blank" rel="noopener">B1081 检查密码</a></p><h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><p>字符串处理，可以用 ctype 头文件中的函数。</p><h2 id="易错点"><a href="#易错点" class="headerlink" title="易错点"></a>易错点</h2><ul><li>当密码太短不考虑是否合法</li></ul><h2 id="也许陌生的知识点"><a href="#也许陌生的知识点" class="headerlink" title="也许陌生的知识点"></a>也许陌生的知识点</h2><ul><li><code>s.erase(ans.begin());</code><ul><li>删除字符串第一个字符</li><li>所需头文件： <strong>string</strong></li></ul></li><li><p><code>s.empty()</code></p><ul><li>判断一个字符串是否为空字符串</li><li>所需头文件： <strong>string</strong></li></ul></li><li><p>ctype 头文件中包含的一系列处理单个字符的函数:</p><ul><li><code>isalnum()</code><ul><li>判断字符是否为字母或者数字</li></ul></li><li><code>isalpha()</code><ul><li>判断字符是否为字母</li></ul></li><li><code>isblank()</code><ul><li>判断字符是否为空格</li></ul></li><li><code>isdigit()</code><ul><li>判断字符是否为数字</li></ul></li><li><code>islower()</code><ul><li>判断字符是否为小写字母</li></ul></li><li><code>isupper()</code><ul><li>判断字符是否为大写字母</li></ul></li><li><code>y = tolower(x)</code><ul><li>将大写字母转换为小写字母</li></ul></li><li><code>y = toupper(x)</code><ul><li>将小写字母转换为大写字母</li></ul></li></ul></li></ul><h2 id="代码示例："><a href="#代码示例：" class="headerlink" title="代码示例："></a>代码示例：</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> N;</span><br><span class="line">  <span class="built_in">string</span> str;</span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">"%d\n"</span>, &amp;N);</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++)&#123;</span><br><span class="line">    <span class="keyword">int</span> len = <span class="number">0</span>, hasdigit = <span class="number">0</span>, hasalpha = <span class="number">0</span>, valid = <span class="number">1</span>;</span><br><span class="line">    getline(<span class="built_in">cin</span>, str);</span><br><span class="line">    <span class="keyword">if</span>(str.length() &lt; <span class="number">6</span>) <span class="built_in">cout</span> &lt;&lt; <span class="string">"Your password is tai duan le."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">while</span>(!str.empty() &amp;&amp; valid)&#123;</span><br><span class="line">        <span class="keyword">if</span>(!<span class="built_in">isalnum</span>(str[<span class="number">0</span>]) &amp;&amp; str[<span class="number">0</span>] != <span class="string">'.'</span>) valid = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">isdigit</span>(str[<span class="number">0</span>])) hasdigit = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">isalpha</span>(str[<span class="number">0</span>])) hasalpha = <span class="number">1</span>;</span><br><span class="line">        str.erase(str.begin());</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span>(!valid) <span class="built_in">cout</span> &lt;&lt; <span class="string">"Your password is tai luan le."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">      <span class="keyword">else</span> <span class="keyword">if</span>(hasalpha == <span class="number">1</span> &amp;&amp; hasdigit == <span class="number">0</span>) <span class="built_in">cout</span> &lt;&lt; <span class="string">"Your password needs shu zi."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">      <span class="keyword">else</span> <span class="keyword">if</span>(hasalpha == <span class="number">0</span> &amp;&amp; hasdigit == <span class="number">1</span>) <span class="built_in">cout</span> &lt;&lt; <span class="string">"Your password needs zi mu."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">      <span class="keyword">else</span> <span class="built_in">cout</span> &lt;&lt; <span class="string">"Your password is wan mei."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
