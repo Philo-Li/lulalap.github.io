@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://lulalap.com/2020/01/01/hello-2020/</loc>
+    
+    <lastmod>2020-01-01T14:27:48.950Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://lulalap.com/2019/01/01/hello-2019/</loc>
     
     <lastmod>2020-01-01T14:18:02.210Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://lulalap.com/2019/12/04/PAT-A1150-cpp/</loc>
     
     <lastmod>2020-01-01T14:16:08.500Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lulalap.com/2020/01/01/hello-2020/</loc>
-    
-    <lastmod>2020-01-01T14:12:26.154Z</lastmod>
     
   </url>
   
